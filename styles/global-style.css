@@ -1,3 +1,28 @@
 /* font: Afacad */
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
+/* apply to all */
+* {
+    color: black;
+    font-family: afacad;
+    background-color: white;
+    text-decoration: none;
+}
+
+/* links/text */
+a {
+    font-weight: 450;
+    letter-spacing: -0.1px;
+}
+
+.primary-link {
+    font-size: 1.15rem;
+}
+
+.secondary-link {
+    font-size: 0.9rem;
+}
+
+#interact-link {
+    color: #0000ff;
+}

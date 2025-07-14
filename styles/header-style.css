@@ -1,26 +1,71 @@
-* {
-    margin: 0;
-    
-    /* testing purposes
-    border: 1px solid lime;
-    */
+/* === MOBILE-FIRST === */
+#menu-btn, header, a, h3, p {
+    color: #ffffff;
 }
-
-/* === MOBILE-FIRST */
 
 .desktop-nav {
     display: none;
 }
 
-.mobile-menu, a, p, h2 {
-    background-color: #0000ff;
+
+.mobile-menu {
     color: #ffffff;
+    background-color: #0000ff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: start;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
+}
+
+.mobile-menu-links-primary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 0.8rem;
+}
+
+.mobile-menu-links-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 0.8rem;
+}
+
+.mobile-menu-horizontal-scroll {
+    overflow-x: auto;
+    display: flex;
+    gap: 0.5rem;
+    padding-block: 1.5rem;
+    overflow-y: hidden;
+}
+
+.scroll-item {
+    flex: 0 0 auto; /* prevent shrinking or growing */
+    width: 15em;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scroll-item p {
+    font-size: 0.8rem;
 }
 
 
+/* --- MOBILE NAV LINKS ---*/
+#menu-btn {
+    border: none;
+    background-color: #0000ff;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
 
 .nav-logo {
-        width: 50px;
+    width: 50px;
 }
 
 

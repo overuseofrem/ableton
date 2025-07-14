@@ -26,7 +26,12 @@ a {
 }
 
 .fine-link {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.footer-link {
+    font-size: 0.95rem;
+    font-weight: 300;
 }
 
 #interact-link {
@@ -44,4 +49,13 @@ h2 {
 
 h3 {
     font-size: 1.35rem;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+p {
+    font-size: 0.95rem;
+    font-weight: 300;
 }

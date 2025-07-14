@@ -4,7 +4,7 @@ a responsive front-end recreation of the [Ableton](https://www.frontendpractice.
 
 👉 [no site link yet 🥹]
 
----
+<br>
 
 ## 📌 about the project
 
@@ -14,7 +14,7 @@ this is a **pure front-end project**: no frameworks, libraries, or build tools. 
 > ❗this is a personal practice project! all banding, content, and design elements remain the property of Ableton. this clone is for educational, recreational, and non-commercial use only.
 > images, and text may be replaced with placeholders or free-to-use alternatives.
 
----
+<br>
 
 ## 🍮 features?
 
@@ -24,7 +24,7 @@ this is a **pure front-end project**: no frameworks, libraries, or build tools. 
 - vanilla HTML/CSS/javascript only
 - layout, hover states, and interaction mimicry (attempt)
 
----
+<br>
 
 ## 🔧 tech stack
 
@@ -34,7 +34,7 @@ this is a **pure front-end project**: no frameworks, libraries, or build tools. 
 
 no frameworks or tooling (e.g., no React, Tailwind, or Webpack)
 
----
+<br>
 
 ## 📂 file structure
 
@@ -53,13 +53,13 @@ ableton/
 
 *may expand as more pages are added*
 
----
+<br>
 
 ## ⏳ status
 
 this is a **work-in-progress**. hopefully i actually finish it.
 
----
+<br>
 
 ## 📝 license
 

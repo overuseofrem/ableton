@@ -5,11 +5,12 @@
 * {
     color: black;
     font-family: afacad;
-    background-color: white;
     text-decoration: none;
 }
 
-/* links/text */
+/* === TEXT === */
+
+/* --- LINKS --- */
 a {
     font-weight: 450;
     letter-spacing: -0.1px;
@@ -23,6 +24,15 @@ a {
     font-size: 0.9rem;
 }
 
+.fine-link {
+    font-size: 0.5rem;
+}
+
 #interact-link {
     color: #0000ff;
+}
+
+/* --- HEADINGS --- */
+h1 {
+
 }

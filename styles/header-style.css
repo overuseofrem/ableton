@@ -6,21 +6,64 @@
     */
 }
 
-.primary-nav {
-    border: 1px solid lime;
+/* === MOBILE-FIRST */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2.5rem 1rem 2.5rem;
+.desktop-nav {
+    display: none;
 }
 
-.primary-nav-right, .primary-nav-left {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
+.mobile-menu, a, p, h2 {
+    background-color: #0000ff;
+    color: #ffffff;
 }
+
+
 
 .nav-logo {
-    width: 35px;
+        width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === MEDIA QUIERIES === */
+
+/* --- TABLETS --- */
+@media screen and (min-width: 800px) { /* content layout */
+    
+}
+
+/* --- LARGER SCREENS --- */
+@media screen and (min-width: 1000px) { /* exit burger menu */
+    .primary-nav {
+        border: 1px solid lime;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2.5rem 1rem 2.5rem;
+    }
+
+    .primary-nav-right, .primary-nav-left {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
 }

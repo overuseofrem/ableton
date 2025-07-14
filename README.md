@@ -36,25 +36,6 @@ no frameworks or tooling (e.g., no React, Tailwind, or Webpack)
 
 <br>
 
-## 📂 file structure
-
-ableton/
-├── index.html
-├── [page-name].html
-├── css/
-│ └── global-style.css
-| └── [element]-style.css
-├── js/
-│ └── script.js
-├── assets/
-│ ├── images/
-│ └── icons/
-└── README.md
-
-*may expand as more pages are added*
-
-<br>
-
 ## ⏳ status
 
 this is a **work-in-progress**. hopefully i actually finish it.

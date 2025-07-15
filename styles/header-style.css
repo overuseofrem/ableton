@@ -3,9 +3,11 @@
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    gap: 1.7rem;
-    padding: 1.25rem 1.25rem 0rem 1.25rem;
+    gap: 1.5rem;
+    padding: 1.25rem;
     transition: background-color 0.3s ease; /* transition color when menu is active*/
+    position: relative;
+    z-index: 1001;
 }
 
 /* mobile header turns blue when menu is active */
@@ -14,10 +16,20 @@
 }
 
 .mobile-menu {
+    color: #ffffff;
+    background-color: #0000ff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: start;
+    padding-left: 1.5rem;
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.3s ease;
+    position: absolute;
+    z-index: 1000;
 }
 
 .mobile-menu.slide-down {
@@ -32,23 +44,6 @@ header, a, h3, p {
 .desktop-nav {
     display: none;
 }
-
-.mobile-menu {
-    color: #ffffff;
-    background-color: #0000ff;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: start;
-    padding-left: 1.5rem;
-    padding: 1.5rem 1.5rem 0rem 1.5rem;
-}
-
-.mobile-menu.slide-down {
-    max-height: 1000px;
-    opacity: 1;
-}
-
 
 .mobile-menu-links-primary {
     display: flex;
@@ -94,7 +89,7 @@ header, a, h3, p {
     border: none;
     background-color: transparent;
     font-size: 1.45rem;
-    font-weight: 700;
+    font-weight: 500;
     color: black;
     transition: color 0.3s ease; /* Add this line */
 }
@@ -109,7 +104,7 @@ header, a, h3, p {
     font-size: 0.45rem;
     margin-left: 1rem;
     position: absolute;
-    top: 2.55rem;
+    top: 2.1rem;
     color: inherit;
     transition: transform 0.3s ease;
 }
@@ -119,7 +114,7 @@ header, a, h3, p {
 }
 
 .nav-logo {
-    width: 50px;
+    width: 35px;
 }
 
 /* === MEDIA QUIERIES === */

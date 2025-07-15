@@ -36,6 +36,15 @@ no frameworks or tooling (e.g., no React, Tailwind, or Webpack)
 
 <br>
 
+## 📷 sources i used
+
+- [Frontend Practice](https://www.frontendpractice.com/projects/ableton) challenge site
+- the [Ableton website](https://www.ableton.com/en/)
+- for images: [pexels](https://www.pexels.com/) and [unsplash](https://unsplash.com/)
+- for icons: [boxicons](https://boxicons.com/)
+
+<br>
+
 ## ⏳ status
 
 this is a **work-in-progress**. hopefully i actually finish it.

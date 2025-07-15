@@ -1,5 +1,31 @@
 /* === MOBILE-FIRST === */
-#menu-btn, header, a, h3, p {
+.mobile-header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    padding: 1.25rem 1.25rem 0rem 1.25rem;
+    transition: background-color 0.3s ease; /* transition color when menu is active*/
+}
+
+/* mobile header turns blue when menu is active */
+.mobile-header.menu-active {
+    background-color: #0000ff;
+}
+
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+
+.mobile-menu.slide-down {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+header, a, h3, p {
     color: #ffffff;
 }
 
@@ -14,9 +40,15 @@
     flex-direction: column;
     align-items: left;
     text-align: start;
-    gap: 1rem;
+    padding-left: 1.5rem;
     padding: 1.5rem 1.5rem 0rem 1.5rem;
 }
+
+.mobile-menu.slide-down {
+    max-height: 1000px;
+    opacity: 1;
+}
+
 
 .mobile-menu-links-primary {
     display: flex;
@@ -57,35 +89,38 @@
 
 
 /* --- MOBILE NAV LINKS ---*/
+/* menu button with transition */
 #menu-btn {
     border: none;
-    background-color: #0000ff;
+    background-color: transparent;
     font-size: 1.45rem;
     font-weight: 700;
+    color: black;
+    transition: color 0.3s ease; /* Add this line */
+}
+
+#menu-btn.menu-open {
+    color: white;
+}
+
+
+#menu-btn::after {
+    content: "▼";
+    font-size: 0.45rem;
+    margin-left: 1rem;
+    position: absolute;
+    top: 2.55rem;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+#menu-btn.menu-open::after {
+    transform: rotate(180deg); /* rotate arrow */
 }
 
 .nav-logo {
     width: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* === MEDIA QUIERIES === */
 

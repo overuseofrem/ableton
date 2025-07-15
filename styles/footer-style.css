@@ -23,39 +23,84 @@ footer {
     gap: 0.7rem;
 }
 
+/* --- FORMS ---*/
 
-
-/* --- EMAIL FORM ---*/
+/* newsletter form */
 .newsletter-form {
-  display: flex;
-  margin-top: 0.5em;
+    display: flex;
+    margin-top: 0.5rem;
 }
 
 .newsletter-form input[type="email"] {
-  flex: 1;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  font-size: 1em;
-  background-color: #eee;
-  border: none;
+    flex: 1;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    font-size: 1em;
+    background-color: #eee;
+    border: none;
 }
 
 .newsletter-form button {
-  padding: 0.5em 1em;
-  font-size: 1em;
-  background-color: #0000ff;
-  color: white;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #0000ff;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
 }
 
 .newsletter-form button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
+/* language/location selection form */
+.language-location-selectors {
+    display: flex;
+    gap: 4px;
+    margin-top: 0.5rem;
+}
 
+.custom-select {
+    position: relative;
+}
 
+.custom-select select {
+  width: 100%;
+  appearance: none;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+}
 
+/* dropdown arrows */
+.custom-select::after {
+    content: "▼";
+    position: absolute;
+    font-size: 0.5rem;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #000;
+}
+
+/* dropdown widths */
+.custom-select.short {
+    flex: 0 0 110px;
+}
+
+.custom-select.long {
+    flex: 0 0 160px;
+}
+
+/* --- Links? --- */
+.footer-link::after {
+    content: " ›";
+    color: inherit;
+}
 
 /* === MEDIA QUIERIES === */
 

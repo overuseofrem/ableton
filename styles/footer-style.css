@@ -2,3 +2,69 @@
 footer a, h1, h4, p {
     color: black;
 }
+
+/* --- LAYOUT --- */
+footer, .footer-content, .footer-item, .footer-fine, .footer-fine-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer {
+    padding: 2.6rem;
+}
+
+.footer-item {
+    gap: 0.2rem;
+    
+}
+
+.footer-fine-item {
+    gap: 0.7rem;
+}
+
+
+
+/* --- EMAIL FORM ---*/
+.newsletter-form {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1em;
+  background-color: #eee;
+  border: none;
+}
+
+.newsletter-form button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #0000ff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* === MEDIA QUIERIES === */
+
+/* --- TABLETS --- */
+@media screen and (min-width: 800px) { /* content layout */
+    
+}
+
+/* --- LARGER SCREENS --- */
+@media screen and (min-width: 1000px) { /* exit burger menu */
+
+}

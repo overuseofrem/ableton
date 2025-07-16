@@ -1,5 +1,9 @@
-.content-wrapper {
-    height: 100px;
-    width: 100%;
-    background-color: grey;
+main, .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.article-img {
+    width: 30px;
 }

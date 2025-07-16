@@ -23,6 +23,13 @@ footer {
     gap: 0.7rem;
 }
 
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
 /* --- FORMS ---*/
 
 /* newsletter form */
@@ -100,6 +107,11 @@ footer {
 .footer-link::after {
     content: " ›";
     color: inherit;
+}
+
+/* --- footer logo */
+.footer-logo {
+    width: 30px;
 }
 
 /* === MEDIA QUIERIES === */

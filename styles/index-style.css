@@ -1,9 +1,23 @@
+/* mobile first */
+
+/* layout */
 main, .content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
+.hero-banner {
+    height: 100px; /* temporary to see where this is*/
+    background-color: grey;
+}
+
 .article-img {
     width: 30px;
+}
+
+
+/* text */
+a, h1, h2, p {
+    color: #000000;
 }

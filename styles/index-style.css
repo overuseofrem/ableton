@@ -14,12 +14,11 @@ main, .content-wrapper {
 }
 
 .content-wrapper, .more-links {
-    padding: 1rem 2.5rem 1rem 2.5rem;
+    padding: 1rem 2.5rem 0rem 2.5rem;
 }
 
 .category-article, .article-other  {
     text-align: start;
-    padding-bottom: 1.1rem;
 }
 
 main .primary-link {
@@ -29,7 +28,8 @@ main .primary-link {
 
 .article-img {
     width: 100%;
-    height: 190px;
+    height: 55vw;
+    object-fit: cover;
 }
 
 .category-headline {
@@ -81,3 +81,20 @@ main h1, h2 {
     font-size: 1.15rem;
 }
 
+/* === MEDIA QUIERIES === */
+
+/* --- TABLETS --- */
+@media screen and (min-width: 500px) { /* content-wrapper layout > grid */
+    .content-wrapper {
+        display: grid;
+    }  
+}
+
+@media screen and (min-width: 500px) { /* hero-banner layout */
+    
+}
+
+/* --- LARGER SCREENS --- */
+@media screen and (min-width: 1000px) {
+
+}

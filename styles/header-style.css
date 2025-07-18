@@ -121,11 +121,6 @@ header, a, h3, p {
 
 /* === MEDIA QUIERIES === */
 
-/* --- TABLETS --- */
-@media screen and (min-width: 800px) { /* content layout */
-    
-}
-
 /* --- LARGER SCREENS --- */
 @media screen and (min-width: 1000px) { /* exit burger menu */
     .primary-nav {

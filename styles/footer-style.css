@@ -116,12 +116,52 @@ footer {
 
 /* === MEDIA QUIERIES === */
 
-/* --- TABLETS --- */
-@media screen and (min-width: 800px) { /* content layout */
-    
-}
-
 /* --- LARGER SCREENS --- */
-@media screen and (min-width: 1000px) { /* exit burger menu */
+@media screen and (min-width: 1000px) {
+    footer {
+        padding: 10vw;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 11rem 15rem auto;
+        gap: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    /* reordering for desktop */
+    .footer-item:nth-child(1) { /* Newsletter */
+        order: 3;
+    }
+
+    .footer-item:nth-child(2) { /* Register Live, Push or Move */
+        order: 1;
+    }
+
+    .footer-item:nth-child(3) { /* Education */
+        order: 2;
+    }
+
+    .footer-item:nth-child(4) { /* Community */
+        order: 4;
+    }
+
+    .footer-item:nth-child(5) { /* Language and Location */
+        order: 5;
+    }
+
+    .footer-fine {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-fine-item {
+        flex-direction: row;
+        align-items: center;
+    }
 
 }

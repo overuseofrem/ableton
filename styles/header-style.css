@@ -123,13 +123,21 @@ header, a, h3, p {
 
 /* --- LARGER SCREENS --- */
 @media screen and (min-width: 1000px) { /* exit burger menu */
-    .primary-nav {
-        border: 1px solid lime;
+    
+    .mobile-header, .mobile-menu {
+        display: none;
+    }
 
+    header, a, h3, p {
+        color: #000000;
+    }
+    
+    .desktop-nav {
+        border: 1px solid lime;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2.5rem 1rem 2.5rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
     }
 
     .primary-nav-right, .primary-nav-left {
@@ -137,5 +145,24 @@ header, a, h3, p {
         align-items: center;
         gap: 1.25rem;
     }
+
+    .primary-link {
+        font-size: 1rem;
+    }
+
+    .secondary-link {
+        font-size: 0.9rem;
+    }
+
+    .fine-link {
+        font-size: 0.90rem;
+    }
+
+    .footer-link {
+        font-size: 0.95rem;
+        font-weight: 300;
+    }
+
+
 
 }

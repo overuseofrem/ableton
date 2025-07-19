@@ -4,7 +4,7 @@
 main, .content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: start;
 }
 
@@ -18,7 +18,9 @@ main, .content-wrapper {
 }
 
 .category-article, .article-other  {
+    width:100%;
     text-align: start;
+    padding-bottom: 2rem;
 }
 
 main .primary-link {
@@ -96,7 +98,7 @@ main h1, h2 {
     }
 
     .article-img {
-        height: 25vw;
+        height: 180px;
     }
 
     .more-links, .more-links p, .more-links a {
@@ -112,6 +114,6 @@ main h1, h2 {
     }
 
     .article-img {
-        height: 18vw;
+        height: 180px;
     }
 }

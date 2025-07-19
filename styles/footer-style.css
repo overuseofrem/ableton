@@ -119,7 +119,7 @@ footer {
 /* --- LARGER SCREENS --- */
 @media screen and (min-width: 1000px) {
     footer {
-        padding: 10vw;
+        padding: 11%;
     }
 
     h1 {
@@ -129,7 +129,7 @@ footer {
     .footer-content {
         display: grid;
         grid-template-columns: 11rem 15rem auto;
-        gap: 3rem;
+        gap: 10%;
         padding-bottom: 1rem;
     }
 

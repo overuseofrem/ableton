@@ -11,14 +11,23 @@
 
 html {
     box-sizing: border-box;
+    /* Add grey background to html */
+    background-color: #f3f3f3;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-/* === TEXT === */
+/* Body wrapper for centered content */
+body {
+    background-color: #ffffff;
+    max-width: 1600px; /* Adjust this value based on when you want the grey to show */
+    margin: 0 auto; /* Centers the content */
+    min-height: 100vh; /* Ensures body takes full height */
+}
 
+/* === TEXT === */
 /* --- LINKS --- */
 a {
     font-weight: 500;
@@ -48,11 +57,9 @@ a {
 
 /* --- HEADINGS and P--- */
 h1 {
-
 }
 
 h2 {
-
 }
 
 h3 {

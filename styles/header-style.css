@@ -133,7 +133,6 @@ header, a, h3, p {
     }
     
     .desktop-nav {
-        border: 1px solid lime;
         display: flex;
         justify-content: space-between;
         align-items: center;

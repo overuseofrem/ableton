@@ -119,7 +119,8 @@ footer {
 /* --- LARGER SCREENS --- */
 @media screen and (min-width: 1000px) {
     footer {
-        padding: 11%;
+        padding-inline: 11%;
+        padding-block: 6rem;
     }
 
     h1 {

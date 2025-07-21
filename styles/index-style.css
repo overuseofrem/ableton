@@ -9,8 +9,11 @@ main, .content-wrapper {
 }
 
 .hero-banner {
-    height: 100px; /* temporary to see where this is*/
     background-color: grey;
+}
+
+.hero-img {
+    width: 100px; /* temporary */
 }
 
 .content-wrapper, .more-links {

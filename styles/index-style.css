@@ -9,11 +9,17 @@ main, .content-wrapper {
 }
 
 .hero-banner {
-    background-color: grey;
+    padding-bottom: 2rem;
+}
+
+.first {
+    width: 55%;
+    
 }
 
 .hero-img {
-    width: 100px; /* temporary */
+    width: 100%;
+    aspect-ratio: 4 / 3;
 }
 
 .content-wrapper, .more-links {

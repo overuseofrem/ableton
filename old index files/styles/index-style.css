@@ -1,0 +1,129 @@
+/* mobile first */
+
+/* layout */
+main, .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: start;
+}
+
+.hero-banner {
+    padding-bottom: 2rem;
+}
+
+.first {
+    width: 55%;
+    
+}
+
+.hero-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.content-wrapper, .more-links {
+    padding: 1rem 10vw 0rem 10vw;
+}
+
+.category-article, .article-other  {
+    width:100%;
+    text-align: start;
+    padding-bottom: 2rem;
+}
+
+main .primary-link {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.article-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.category-headline {
+    padding-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.category {
+    width: fit-content;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    font-weight: 500;
+}
+
+.artists {
+    background-color: #FED134;
+}
+
+.downloads {
+    background-color: #FF8389;
+}
+
+.videos {
+    background-color: #B1C5FF;
+}
+
+.more-links {
+    background-color: rgb(245, 244, 244);
+    padding-block: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 5rem;
+}
+
+.more-links a {
+    padding-inline: 0.2rem;
+}
+
+/* text */
+main a, h1, h2, p {
+    color: #000000;
+}
+
+main h1, h2 {
+    font-size: 1.30rem;
+}
+
+.category-headline a, .article-other a {
+    font-size: 1.15rem;
+}
+
+/* === MEDIA QUERIES === */
+
+/* --- TABLETS (2 columns) --- */
+@media screen and (min-width: 500px) {
+    main h1, h2 {
+        font-size: 2.30rem;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .article-img {
+        height: 180px;
+    }
+
+    .more-links, .more-links p, .more-links a {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+/* --- LARGER SCREENS (3 columns) --- */
+@media screen and (min-width: 1000px) {
+    .articles-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    }
+
+    .article-img {
+        height: 180px;
+    }
+}

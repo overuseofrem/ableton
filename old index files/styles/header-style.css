@@ -1,0 +1,152 @@
+/* === MOBILE-FIRST === */
+.mobile-header {
+    background-color: #ffffff;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    transition: background-color 0.3s ease; /* transition color when menu is active*/
+    position: relative;
+    z-index: 1001;
+}
+
+/* mobile header turns blue when menu is active */
+.mobile-header.menu-active {
+    background-color: #0000ff;
+}
+
+.mobile-menu {
+    color: #ffffff;
+    background-color: #0000ff;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: start;
+    padding-left: 1.5rem;
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    position: absolute;
+    z-index: 1000;
+}
+
+.mobile-menu.slide-down {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+header, a, h3, p {
+    color: #ffffff;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-menu-links-primary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 0.8rem;
+}
+
+.mobile-menu-links-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 0.8rem;
+}
+
+.mobile-menu-horizontal-scroll {
+    overflow-x: auto;
+    display: flex;
+    gap: 0.5rem;
+    padding-block: 1.5rem;
+    overflow-y: hidden;
+}
+
+.scroll-item {
+    flex: 0 0 auto; /* prevent shrinking or growing */
+    width: 15em;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scroll-item p {
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+
+/* --- MOBILE NAV LINKS ---*/
+/* menu button with transition */
+#menu-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.45rem;
+    font-weight: 500;
+    color: black;
+    transition: color 0.3s ease; /* Add this line */
+}
+
+#menu-btn.menu-open {
+    color: white;
+}
+
+
+#menu-btn::after {
+    content: "▼";
+    font-size: 0.45rem;
+    margin-left: 0.7rem;
+    position: absolute;
+    top: 2.1rem;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+#menu-btn.menu-open::after {
+    transform: rotate(180deg); /* rotate arrow */
+}
+
+.nav-logo {
+    width: 35px;
+}
+
+/* === MEDIA QUIERIES === */
+
+/* --- LARGER SCREENS --- */
+@media screen and (min-width: 1000px) { /* exit burger menu */
+    
+    .mobile-header, .mobile-menu {
+        display: none;
+    }
+
+    header, a, h3, p {
+        color: #000000;
+    }
+    
+    .desktop-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+
+    .primary-nav-right, .primary-nav-left {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .primary-link {
+        font-size: 1rem;
+    }
+
+}

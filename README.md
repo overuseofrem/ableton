@@ -1,6 +1,6 @@
 # Ableton Website Recreation (Frontend Practice)
 
-a responsive front-end recreation of the [Ableton](https://www.ableton.com/en/about/) website. this is a self-directed challenge from [Frontend Practice](https://www.frontendpractice.com/projects/ableton) to improve my layout, design, and vanilla javascript skills. also, because it's fun.
+a responsive front-end recreation of the [Ableton](https://www.ableton.com/en/) website. this is a self-directed challenge from [Frontend Practice](https://www.frontendpractice.com/projects/ableton) to improve my layout, design, and vanilla javascript skills. also, because it's fun.
 
 👉 [no site link yet 🥹]
 
@@ -8,7 +8,7 @@ a responsive front-end recreation of the [Ableton](https://www.ableton.com/en/ab
 
 ## 📌 about the project
 
-the goal is to recerate the structure, appearance, and behavior of the **Ableton website**. specifically, *only* their **about** page, which is the reference used by Frontend Practice.
+the goal is to recerate the structure, appearance, and behavior of the **Ableton website**. specifically, *only* their **homepage** page.
 this is a **pure front-end project**: no frameworks, libraries, or build tools. just pure **html**, **css**, and **javascript**. 🙃
 
 > ❗this is a personal practice project! all banding, content, and design elements remain the property of Ableton. this clone is for educational, recreational, and non-commercial use only.
@@ -39,7 +39,7 @@ no frameworks or tooling (e.g., no React, Tailwind, or Webpack)
 ## 📷 sources i used
 
 - [Frontend Practice](https://www.frontendpractice.com/projects/ableton) challenge site
-- the [Ableton website](https://www.ableton.com/en/about/)
+- the [Ableton website](https://www.ableton.com/en/)
 - for images: [pexels](https://www.pexels.com/) and [unsplash](https://unsplash.com/)
 - for icons: [boxicons](https://boxicons.com/)
 
@@ -48,6 +48,30 @@ no frameworks or tooling (e.g., no React, Tailwind, or Webpack)
 ## ⏳ status
 
 this is a **work-in-progress**. hopefully i actually finish it.
+
+#### page structure (HTML)
+- [X] build the header/nav (desktop)
+- [X] build the header/nav (mobile)
+- [X] build the hero banner
+- [X] build the main content
+- [X] build the html for footer
+
+#### styling (CSS)
+- [X] mobile-first base style
+- [X] style the header/nav
+- [ ] style the hero banner
+- [X] style the main content
+- [X] style the footer
+- [X] responsive hedaer/nav for tablet/desktop
+- [ ] hover states
+
+#### interactivity (JS)
+- [X] mobile navigation menu toggle
+
+#### final stuff
+- [ ] final code cleanup and commenting
+- [ ] deploy the site to Github Pages
+- [ ] add the live site link to the top of the README
 
 <br>
 

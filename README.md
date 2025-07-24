@@ -63,7 +63,6 @@ this is a **work-in-progress**. hopefully i actually finish it.
 - [X] style the main content
 - [X] style the footer
 - [X] responsive hedaer/nav for tablet/desktop
-- [ ] hover states
 
 #### interactivity (JS)
 - [X] mobile navigation menu toggle

@@ -1,6 +1,6 @@
 /* mobile first */
 
-/* layout */
+/* LAYOUT */
 main, .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -8,23 +8,47 @@ main, .content-wrapper {
     text-align: start;
 }
 
+/* HERO */
+
 .hero-banner {
     padding-bottom: 2rem;
 }
 
-.first img {
+/* HERO IMG */
+.hero-banner img {
     width: 100%;
 }
+.second img {
+    margin: 2.5rem 0 0 2.5rem;
+}
+.third img {
+    position: relative;
+    bottom: 1rem;
+    right: 2.5rem;
+}
 
+/* HERO TEXT */
 .first .hero-text {
     position: absolute;
     top: 5rem;
     padding: 3rem;
 }
-
-.hero-img {
-    width: 100%;
+.second .hero-text {
+    position: absolute;
+    top: 5rem;
+    padding: 3rem;
 }
+.third .hero-text {
+    position: absolute;
+    top: 5rem;
+    padding: 3rem;
+}
+
+
+
+
+
+/* MAIN CONTENT */
 
 .content-wrapper, .more-links {
     padding: 1rem 10vw 0rem 10vw;

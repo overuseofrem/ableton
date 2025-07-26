@@ -67,10 +67,6 @@ main, .content-wrapper {
     color: inherit;
 }
 
-
-
-
-
 /* MAIN CONTENT */
 
 .content-wrapper, .more-links {
@@ -147,7 +143,7 @@ main h1, h2 {
 /* === MEDIA QUERIES === */
 
 /* --- TABLETS (2 columns) --- */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /* for grids */
     main h1, h2 {
         font-size: 2.30rem;
     }
@@ -169,7 +165,7 @@ main h1, h2 {
 }
 
 /* --- LARGER SCREENS (3 columns) --- */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) { /* for grids */
     .articles-grid {
         grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
     }
@@ -177,4 +173,51 @@ main h1, h2 {
     .article-img {
         height: 180px;
     }
+}
+
+@media screen and (min-width: 770px) { /* for hero */
+    /* HERO IMG */
+    .first .hero-img {
+        width: 55%;
+    }
+    .second .hero-img {
+        margin: 0;
+        width: 50%;
+    }
+    .third .hero-img {
+        position: relative;
+        bottom: 5vh;
+        right: 8%;
+        z-index: 4;
+    }
+
+    /* HERO TEXT */
+    .hero-text {
+        position: absolute;
+        z-index: 5;
+    }
+    .hero-header {
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    .hero-link {
+        text-decoration: underline;
+    }
+    .first .hero-text {
+        top: 10%;
+        left: 10%;
+        max-width: 70%;
+    }
+    .second .hero-text {
+        top: 10%;
+        left: 17%;
+        max-width: 70%;
+    }
+    .third .hero-text {
+        top: 0;
+        left: 10%;
+        max-width: 70%;
+    }
+
 }

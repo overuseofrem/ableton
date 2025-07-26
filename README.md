@@ -2,7 +2,7 @@
 
 a responsive front-end recreation of the [Ableton](https://www.ableton.com/en/) website. this is a self-directed challenge from [Frontend Practice](https://www.frontendpractice.com/projects/ableton) to improve my layout, design, and vanilla javascript skills. also, because it's fun.
 
-👉 [no site link yet 🥹]
+👉 [Github Page link](https://overuseofrem.github.io/ableton/)
 
 <br>
 
@@ -69,8 +69,8 @@ this is a **work-in-progress**. hopefully i actually finish it.
 
 #### final stuff
 - [ ] final code cleanup and commenting
-- [ ] deploy the site to Github Pages
-- [ ] add the live site link to the top of the README
+- [X] deploy the site to Github Pages
+- [X] add the live site link to the top of the README
 
 <br>
 

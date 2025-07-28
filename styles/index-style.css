@@ -180,22 +180,22 @@ main h1, h2 {
         overflow-y: hidden;
         height: 61vw;
     }
-    .hero-content {
-        position:static;
-    }
 
     /* HERO IMG */
     .first .hero-img {
         width: 57%;
     }
     .second .hero-img {
+        position: absolute;
         bottom: 0;
         right: 0;
         width: 35%;
     }
     .third .hero-img {
+        position: absolute;
+        transform: translateY(-20%);
         top: 0%;
-        right: 0%;
+        right: 25%;
         width: 35%;
         z-index: 4;
     }
@@ -211,14 +211,12 @@ main h1, h2 {
         font-size: calc(0.7rem + 1.5vw);
     }
     .second .hero-text {
-        position: absolute;
-        top: 0;
+        top: 0%;
         left: 67%;
         padding-right: 2vw;
     }
     .third .hero-text {
-        transform: translateY(-50px);
-        top: 0%;
+        top: -3.5vh;
         left: 43%;
         padding-right: 2vw;
     }

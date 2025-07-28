@@ -177,7 +177,11 @@ main h1, h2 {
 
 @media screen and (min-width: 770px) { /* for hero */
     .hero-banner {
+        overflow-y: hidden;
         height: 61vw;
+    }
+    .hero-content {
+        position:static;
     }
 
     /* HERO IMG */
@@ -185,15 +189,13 @@ main h1, h2 {
         width: 57%;
     }
     .second .hero-img {
-        position: absolute;
         bottom: 0;
         right: 0;
         width: 35%;
     }
     .third .hero-img {
-        position: absolute;
-        top: -5vw;
-        right: 25%;
+        top: 0%;
+        right: 0%;
         width: 35%;
         z-index: 4;
     }
@@ -209,13 +211,15 @@ main h1, h2 {
         font-size: calc(0.7rem + 1.5vw);
     }
     .second .hero-text {
-        top: -21vw;
-        left: 67.5vw;
+        position: absolute;
+        top: 0;
+        left: 67%;
         padding-right: 2vw;
     }
     .third .hero-text {
-        top: -2.5vw;
-        left: 42.5vw;
+        transform: translateY(-50px);
+        top: 0%;
+        left: 43%;
         padding-right: 2vw;
     }
     .second .hero-header, .third .hero-header {

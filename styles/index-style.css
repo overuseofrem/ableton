@@ -40,7 +40,7 @@ main, .content-wrapper {
     z-index: 5;
 }
 .hero-header {
-    font-size: 1.75rem;
+    font-size: calc(1.75rem + 1vw);
     font-weight: 500;
     line-height: 1.25;
 }
@@ -48,7 +48,7 @@ main, .content-wrapper {
     text-decoration: underline;
 }
 .first .hero-text {
-    top: 10%;
+    top: 12%;
     left: 10%;
     max-width: 70%;
 }
@@ -177,7 +177,7 @@ main h1, h2 {
 
 @media screen and (min-width: 770px) { /* for hero */
     .hero-banner {
-        height: 55vw;
+        height: 61vw;
     }
 
     /* HERO IMG */
@@ -201,22 +201,24 @@ main h1, h2 {
     /* HERO TEXT */
     .first .hero-text {
         left: 5%;
-        max-width: 70%;
     }
     .first .hero-header {
-        font-size: 2.5rem;
+        font-size: calc(1.5rem + 1.5vw);
+    }
+    .first .hero-link {
+        font-size: calc(0.7rem + 1.5vw);
     }
     .second .hero-text {
-
-        top: 10%;
-        left: 17%;
-        max-width: 70%;
+        top: -21.5vw;
+        left: 67.5vw;
+        padding-right: 2vw;
     }
     .third .hero-text {
-
-        top: 0;
-        left: 10%;
-        max-width: 70%;
+        top: -3vw;
+        left: 42.5vw;
+    }
+    .second .hero-header, .third .hero-header {
+        font-size: calc(0.5rem + 1.5vw);
     }
 
 }

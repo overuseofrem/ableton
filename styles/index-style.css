@@ -176,45 +176,44 @@ main h1, h2 {
 }
 
 @media screen and (min-width: 770px) { /* for hero */
+    .hero-banner {
+        height: 55vw;
+    }
+
     /* HERO IMG */
     .first .hero-img {
-        width: 55%;
+        width: 57%;
     }
     .second .hero-img {
-        margin: 0;
-        width: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 35%;
     }
     .third .hero-img {
-        position: relative;
-        bottom: 5vh;
-        right: 8%;
+        position: absolute;
+        top: -5vw;
+        right: 25%;
+        width: 35%;
         z-index: 4;
     }
 
     /* HERO TEXT */
-    .hero-text {
-        position: absolute;
-        z-index: 5;
-    }
-    .hero-header {
-        font-size: 1.75rem;
-        font-weight: 500;
-        line-height: 1.25;
-    }
-    .hero-link {
-        text-decoration: underline;
-    }
     .first .hero-text {
-        top: 10%;
-        left: 10%;
+        left: 5%;
         max-width: 70%;
     }
+    .first .hero-header {
+        font-size: 2.5rem;
+    }
     .second .hero-text {
+
         top: 10%;
         left: 17%;
         max-width: 70%;
     }
     .third .hero-text {
+
         top: 0;
         left: 10%;
         max-width: 70%;

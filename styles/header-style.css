@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding: 1.25rem;
+    padding: 1.1rem;
     transition: background-color 0.3s ease; /* transition color when menu is active*/
     position: relative;
     z-index: 1001;

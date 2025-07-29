@@ -52,6 +52,7 @@ this is a **work-in-progress**. hopefully i actually finish it.
 #### page structure (HTML)
 - [X] build the header/nav (desktop)
 - [X] build the header/nav (mobile)
+- [ ] build the 'more+' menu
 - [X] build the hero banner
 - [X] build the main content
 - [X] build the html for footer
@@ -59,6 +60,7 @@ this is a **work-in-progress**. hopefully i actually finish it.
 #### styling (CSS)
 - [X] mobile-first base style
 - [X] style the header/nav
+- [ ] style the 'more+' menu 
 - [ ] style the hero banner
 - [X] style the main content
 - [X] style the footer

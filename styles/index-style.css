@@ -2,6 +2,8 @@
 
 /* LAYOUT */
 main, .content-wrapper {
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -178,7 +180,7 @@ main h1, h2 {
 @media screen and (min-width: 770px) { /* for hero */
     .hero-banner {
         overflow-y: hidden;
-        height: 61vw;
+        height: calc(61vw - 5vw);
     }
 
     /* HERO IMG */

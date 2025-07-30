@@ -213,12 +213,14 @@ main h1, h2 {
         font-size: calc(0.7rem + 1.5vw);
     }
     .second .hero-text {
-        top: -29vh;
+        position: absolute;
+        top: 0;
         left: 67%;
         padding-right: 2vw;
     }
     .third .hero-text {
-        top: -3.5vh;
+        position: absolute;
+        top: -10%;
         left: 43%;
         padding-right: 2vw;
     }

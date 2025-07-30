@@ -23,3 +23,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// More+ menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const megaMenuLink = document.getElementById('mega-menu');
+    const secondaryNav = document.querySelector('.secondary-nav');
+
+    // Initially hide the secondary navigation
+    secondaryNav.style.display = 'none';
+
+    megaMenuLink.addEventListener('click', (event) => {
+        // Prevent the default link behavior (e.g., navigating to '#')
+        event.preventDefault();
+
+        // Toggle the display of the secondary navigation
+        if (secondaryNav.style.display === 'none' || secondaryNav.style.display === '') {
+            secondaryNav.style.display = 'flex'; // Or 'block', depending on your CSS layout
+            megaMenuLink.classList.add('active'); // Add a class to change the ::after content
+        } else {
+            secondaryNav.style.display = 'none';
+            megaMenuLink.classList.remove('active'); // Remove the class
+        }
+    });
+});

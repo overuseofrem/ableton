@@ -150,7 +150,14 @@ header, a, h3, p {
         gap: 1.25rem;
     }
     .primary-link {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
+    }
+    #mega-menu::after {
+    content: " +";
+    color: inherit;
+    }
+    #mega-menu.active::after {
+        content: " -";
     }
 
     /* secondary nav */

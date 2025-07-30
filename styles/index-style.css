@@ -74,49 +74,40 @@ main, .content-wrapper {
 .content-wrapper, .more-links {
     padding: 1rem 10vw 0rem 10vw;
 }
-
 .category-article, .article-other  {
     width:100%;
     text-align: start;
     padding-bottom: 2rem;
 }
-
 main .primary-link {
     text-align: center;
     font-size: 1.1rem;
 }
-
 .article-img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
-
 .category-headline {
     padding-top: 0.3rem;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
 }
-
 .category {
     width: fit-content;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
     font-weight: 500;
 }
-
 .artists {
     background-color: #FED134;
 }
-
 .downloads {
     background-color: #FF8389;
 }
-
 .videos {
     background-color: #B1C5FF;
 }
-
 .more-links {
     background-color: rgb(245, 244, 244);
     padding-block: 2rem;
@@ -124,7 +115,6 @@ main .primary-link {
     font-weight: 500;
     margin-top: 1rem;
 }
-
 .more-links a {
     padding-inline: 0.2rem;
 }
@@ -147,19 +137,19 @@ main h1, h2 {
 /* --- TABLETS (2 columns) --- */
 @media screen and (min-width: 600px) { /* for grids */
     main h1, h2 {
-        font-size: 2.30rem;
+        font-size: calc(1.75rem + 0.5vw);
     }
-
+    .content-wrapper .mobile {
+        display: none;
+    }
     .articles-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
     }
-
     .article-img {
         height: 180px;
     }
-
     .more-links, .more-links p, .more-links a {
         text-align: center;
         font-size: 1.5rem;

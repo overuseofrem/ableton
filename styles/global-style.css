@@ -57,19 +57,16 @@ a {
 
 /* --- HEADINGS and P--- */
 h1 {
+    font-weight: 490;
 }
-
 h2 {
 }
-
 h3 {
     font-size: 1.35rem;
 }
-
 h4 {
     font-weight: 500;
 }
-
 p {
     font-size: 0.95rem;
     font-weight: 300;

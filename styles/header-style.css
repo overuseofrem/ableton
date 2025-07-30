@@ -1,4 +1,8 @@
 /* === MOBILE-FIRST === */
+.secondary-nav {
+    display: none;
+}
+
 .mobile-header {
     background-color: #ffffff;
     width: 100vw;
@@ -123,30 +127,63 @@ header, a, h3, p {
 
 /* --- LARGER SCREENS --- */
 @media screen and (min-width: 1000px) { /* exit burger menu */
-    
+    /* visibility */
     .mobile-header, .mobile-menu {
         display: none;
     }
 
+    /* text colors */
     header, a, h3, p {
         color: #000000;
     }
     
+    /* desktop nav */
     .desktop-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.5rem 1rem 1.5rem;
+        padding: 1rem 2.3rem 1rem 2.3rem;
     }
-
     .primary-nav-right, .primary-nav-left {
         display: flex;
         align-items: center;
         gap: 1.25rem;
     }
-
     .primary-link {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
+    /* secondary nav */
+
+    /* secondary nav layout*/
+    .secondary-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 2.5rem 2.5rem 2.5rem;
+    }
+    .secondary-menu-horizontal {
+        display: flex;
+        gap: 3rem;
+    }
+    .secondary-menu-links a {
+        margin-right: 2rem;
+    }
+
+    /* secondary nav text */
+    .secondary-nav h2 {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    .secondary-nav a {
+        font-weight: 400;
+        font-size: 1.25rem;
+    }
+    .secondary-nav p {
+        font-size: 1.25rem;
+    }
+    .secondary-menu-horizontal a {
+        font-weight: 500;
+    }
+    
 }

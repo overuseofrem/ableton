@@ -213,7 +213,7 @@ main h1, h2 {
         font-size: calc(0.7rem + 1.5vw);
     }
     .second .hero-text {
-        top: 0%;
+        top: -29vh;
         left: 67%;
         padding-right: 2vw;
     }

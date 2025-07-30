@@ -12,8 +12,8 @@ main, .content-wrapper {
 
 /* HERO */
 .hero-banner {
-    padding-bottom: 2rem;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .hero-content {
     position: relative;
@@ -179,8 +179,7 @@ main h1, h2 {
 
 @media screen and (min-width: 770px) { /* for hero */
     .hero-banner {
-        overflow-y: hidden;
-        height: calc(61vw - 5vw);
+        height: 100%;
     }
 
     /* HERO IMG */
@@ -194,11 +193,12 @@ main h1, h2 {
         width: 35%;
     }
     .third .hero-img {
-        position: absolute;
         transform: translateY(-20%);
         top: 0%;
-        right: 25%;
+        right: 0%;
+        left: 40%;
         width: 35%;
+        bottom: 0%;
         z-index: 4;
     }
 

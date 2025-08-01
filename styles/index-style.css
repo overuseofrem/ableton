@@ -26,19 +26,15 @@ main, .content-wrapper {
     background-color: #0000ff;
     border: none;
     width: auto;
-    opacity: 0;
+    transform: translateY(150%);
     visibility: hidden;
-    transform: translateY(50px); /* Increased from 20px for a more noticeable slide */
-
-    transition: opacity 0.1s ease, visibility 0.3s ease, transform 0.3s ease, left 0.1s linear;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
 }
-
 .scroll-to-articles.visible {
-    opacity: 1;
-    visibility: visible;
     transform: translateY(0);
-    z-index: 5;
+    visibility: visible;
     cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
 }
 .scroll-to-articles img {
     transform: translateY(5px);

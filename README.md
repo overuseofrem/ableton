@@ -55,6 +55,7 @@ this is a **work-in-progress**. hopefully i actually finish it.
 - [X] build the 'more+' menu
 - [X] build the hero banner
 - [X] build the main content
+- [X] build the btn-scroll
 - [X] build the html for footer
 
 #### styling (CSS)
@@ -65,11 +66,13 @@ this is a **work-in-progress**. hopefully i actually finish it.
 - [X] style the main content
 - [X] style 'show more' links
 - [X] style the footer
+- [X] style the btn-scroll
 - [X] responsive hedaer/nav for tablet/desktop
 
 #### interactivity (JS)
 - [X] mobile navigation menu toggle
 - [X] 'more+' menu toggle
+- []  btn-scroll
 
 #### final stuff
 - [ ] final code cleanup and commenting

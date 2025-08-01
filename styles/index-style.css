@@ -18,6 +18,32 @@ main, .content-wrapper {
     text-align: start;
 }
 
+/* BTN-SCROLL */
+.scroll-to-articles {
+    border: red 1px solid;
+    position: fixed;
+    bottom: 0;
+    left: 8%;
+    z-index: 1000;
+
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* Start slightly lower for a nice slide-in effect */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.scroll-to-articles.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Move to its final position */
+}
+
 /* HERO */
 .hero-banner {
     overflow-x: hidden;
@@ -78,7 +104,6 @@ main, .content-wrapper {
 }
 
 /* MAIN CONTENT */
-
 .content-wrapper, .more-links {
     padding: 1rem 9vw 0rem 9vw;
 }
@@ -131,11 +156,9 @@ main .primary-link {
 main a, h1, h2, p {
     color: #000000;
 }
-
 main h1, h2 {
     font-size: 1.30rem;
 }
-
 .category-headline a, .article-other a {
     font-size: 1.15rem;
 }

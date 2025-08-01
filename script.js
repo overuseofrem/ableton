@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.getElementById('menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileHeader = document.querySelector('.mobile-header');
-    const navLogo = document.querySelector('.nav-logo'); // Add this line
-    
+    const navLogo = document.querySelector('.nav-logo');
     menuBtn.addEventListener('click', function () {
+
         // toggle the slide-down class for animation
         mobileNav.classList.toggle('slide-down');
         
@@ -29,20 +29,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const megaMenuLink = document.getElementById('mega-menu');
     const secondaryNav = document.querySelector('.secondary-nav');
 
-    // Initially hide the secondary navigation
+    // initially hide the secondary navigation
     secondaryNav.style.display = 'none';
 
     megaMenuLink.addEventListener('click', (event) => {
-        // Prevent the default link behavior (e.g., navigating to '#')
+        // prevent the default link behavior (e.g., navigating to '#')
         event.preventDefault();
 
-        // Toggle the display of the secondary navigation
+        //toggle the display of the secondary navigation
         if (secondaryNav.style.display === 'none' || secondaryNav.style.display === '') {
-            secondaryNav.style.display = 'flex'; // Or 'block', depending on your CSS layout
-            megaMenuLink.classList.add('active'); // Add a class to change the ::after content
+            secondaryNav.style.display = 'flex';
+            megaMenuLink.classList.add('active');
         } else {
             secondaryNav.style.display = 'none';
             megaMenuLink.classList.remove('active'); // Remove the class
         }
     });
+});
+
+// btn-scroll
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const scrollBtn = document.getElementById('scroll-to-articles-btn');
+    const firstArticleSection = document.querySelector('.content-wrapper');
+
+    // ensure both elements exist before running
+    if (scrollBtn && firstArticleSection) {
+
+        // 1. function to show/hide based on scroll position
+        const handleScrollButtonVisibility = () => {
+            // show the button ONLY if the user is at the very top (scrollY is 0).
+            // 10px buffer just in case of browser quirks.
+            if (window.scrollY < 10) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        };
+
+        // 2. function to scroll to the articles when clicked
+        const scrollToArticles = () => {
+            firstArticleSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        };
+
+        // 3. event listeners
+        window.addEventListener('scroll', handleScrollButtonVisibility);
+        scrollBtn.addEventListener('click', scrollToArticles);
+
+        // 4. run once on page load to show the button initially
+        handleScrollButtonVisibility();
+    }
 });

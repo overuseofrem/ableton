@@ -62,7 +62,7 @@ this is a **work-in-progress**. hopefully i actually finish it.
 - [X] mobile-first base style
 - [X] style the header/nav
 - [X] style the 'more+' menu 
-- [ ] style the hero banner
+- [X] style the hero banner
 - [X] style the main content
 - [X] style 'show more' links
 - [X] style the footer
@@ -72,7 +72,7 @@ this is a **work-in-progress**. hopefully i actually finish it.
 #### interactivity (JS)
 - [X] mobile navigation menu toggle
 - [X] 'more+' menu toggle
-- []  btn-scroll
+- [X]  btn-scroll
 
 #### final stuff
 - [ ] final code cleanup and commenting

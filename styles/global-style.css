@@ -22,9 +22,9 @@ html {
 /* Body wrapper for centered content */
 body {
     background-color: #ffffff;
-    max-width: 1600px; /* Adjust this value based on when you want the grey to show */
-    margin: 0 auto; /* Centers the content */
-    min-height: 100vh; /* Ensures body takes full height */
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100vh;
 }
 
 /* === TEXT === */

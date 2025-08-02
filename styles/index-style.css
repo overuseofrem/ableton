@@ -108,14 +108,33 @@ main h2 {
 }
 
 /* Text color utility classes (moved from inline styles) */
-.color-mint   { color: #00FFAF; }
-.color-yellow { color: #FBFFA7; }
-.color-purple { color: #D5B3FF; }
+.color-mint {
+    color: #00FFAF;
+}
+
+.color-yellow {
+    color: #FBFFA7;
+}
+
+.color-purple {
+    color: #D5B3FF;
+}
 
 /* Positioning for each hero text block */
-.first.hero-content .hero-text { top: 12%; left: 10%; }
-.second.hero-content .hero-text { top: 10%; left: 17%; }
-.third.hero-content .hero-text { top: 0; left: 10%; }
+.first.hero-content .hero-text {
+    top: 12%;
+    left: 10%;
+}
+
+.second.hero-content .hero-text {
+    top: 10%;
+    left: 17%;
+}
+
+.third.hero-content .hero-text {
+    top: 0;
+    left: 10%;
+}
 
 /* =================================================================
    ARTICLE SECTIONS
@@ -147,9 +166,17 @@ main h2 {
 }
 
 /* Category background colors */
-.category.artists   { background-color: #FED134; }
-.category.downloads { background-color: #FF8389; }
-.category.videos    { background-color: #B1C5FF; }
+.category.artists {
+    background-color: #FED134;
+}
+
+.category.downloads {
+    background-color: #FF8389;
+}
+
+.category.videos {
+    background-color: #B1C5FF;
+}
 
 /* Link styles specific to mobile/main content */
 main .link-mobile {
@@ -178,21 +205,28 @@ main .link-mobile {
 
 /* --- TABLETS (600px+) --- */
 @media screen and (min-width: 600px) {
+
     main h1,
     main h2 {
         font-size: calc(1.75rem + 0.5vw);
     }
+
     .articles-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 columns */
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns */
         gap: 2.5rem;
     }
+
     .article-img {
-        height: 180px; /* Use fixed height for consistency in grid */
+        height: 180px;
+        /* Use fixed height for consistency in grid */
     }
+
     .more-links {
         text-align: center;
     }
+
     .more-links span,
     .more-links a {
         font-size: 1.5rem;
@@ -201,27 +235,35 @@ main .link-mobile {
 
 /* --- SMALLER DESKTOPS / LARGE TABLETS (770px+) --- */
 @media screen and (min-width: 770px) {
+
     /* Hide mobile-only "See all posts" link */
     .content-wrapper .link-mobile {
         display: none;
     }
+
     .content-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     /* Show medium-sized desktop "See all posts" link */
     .link-desktop {
         display: block;
         font-size: calc(1rem + 0.5vw);
     }
+
     .link-desktop::after {
         content: " ›";
         font-size: 20px;
     }
 
     /* -- Hero layout adjustments -- */
-    .hero-banner { position: relative; height: 100%; }
+    .hero-banner {
+        position: relative;
+        height: 100%;
+    }
+
     .hero-content.second {
         position: absolute;
         top: 18%;
@@ -229,32 +271,49 @@ main .link-mobile {
         width: 35%;
         aspect-ratio: 4.5 / 3;
     }
-    .first.hero-content .hero-img { width: 57%; }
+
+    .first.hero-content .hero-img {
+        width: 57%;
+    }
+
     .second.hero-content .hero-img {
         position: absolute;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
     .third.hero-content .hero-img {
         width: 35%;
         left: 40%;
         transform: translateY(-20%);
     }
-    .first.hero-content .hero-text { left: 5%; }
-    .first.hero-content .hero-header { font-size: calc(1.5rem + 1.5vw); }
-    .first.hero-content .hero-link { font-size: calc(0.7rem + 1.5vw); }
+
+    .first.hero-content .hero-text {
+        left: 5%;
+    }
+
+    .first.hero-content .hero-header {
+        font-size: calc(1.5rem + 1.5vw);
+    }
+
+    .first.hero-content .hero-link {
+        font-size: calc(0.7rem + 1.5vw);
+    }
+
     .second.hero-content .hero-text {
         width: auto;
         top: 19%;
         left: 16%;
         right: 15%;
     }
+
     .third.hero-content .hero-text {
-        top: -10%;
+        top: -25%;
         left: 43%;
         padding-right: 2vw;
     }
+
     .second .hero-header,
     .third .hero-header {
         font-size: calc(0.5rem + 1.5vw);
@@ -280,32 +339,39 @@ main .link-mobile {
         visibility: hidden;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
     }
+
     .scroll-to-articles.visible {
         transform: translateY(0);
         visibility: visible;
         cursor: pointer;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
     }
+
     .scroll-to-articles img {
         width: 50px;
         object-fit: contain;
         transform: translateY(5px);
     }
-    
+
     /* Show the large category links */
     .link-desktop-large {
         display: block;
     }
+
     .content-title {
         margin-bottom: 1rem;
     }
+
     .article-category-links a {
         font-size: calc(1rem + 0.5vw);
         margin-left: 1rem;
     }
+
     .articles-grid {
-        grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* 3 columns */
     }
+
     .article-img {
         height: 180px;
     }

@@ -1,4 +1,4 @@
-# Ableton Website Recreation (Frontend Practice)
+# Ableton website homepage recreation (Frontend Practice)
 
 a responsive front-end recreation of the [Ableton](https://www.ableton.com/en/) website. this is a self-directed challenge from [Frontend Practice](https://www.frontendpractice.com/projects/ableton) to improve my layout, design, and vanilla javascript skills. also, because it's fun.
 

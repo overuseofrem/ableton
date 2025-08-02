@@ -1,86 +1,126 @@
-/* === MOBILE-FIRST === */
+/*
+ *  FILE: header-style.css
+ *  DESCRIPTION:
+ *  - Styles the header, including mobile and desktop navigation.
+ *  - Uses a mobile-first approach.
+ */
+
+/* =================================================================
+   MOBILE HEADER & NAVIGATION (Default)
+   ================================================================= */
+
+/* Initially hide desktop-only navigation elements */
+.desktop-nav,
 .secondary-nav {
     display: none;
 }
 
+/* --- Mobile Header Bar --- */
 .mobile-header {
-    background-color: #ffffff;
-    width: 100vw;
+    position: relative; /* For z-index to work */
+    z-index: 1001;
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
     padding: 1.1rem;
-    transition: background-color 0.3s ease; /* transition color when menu is active*/
-    position: relative;
-    z-index: 1001;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
 }
 
-/* mobile header turns blue when menu is active */
-.mobile-header.menu-active {
+/* Style for when the mobile menu is active/open */
+.mobile-header.is-menu-active {
     background-color: #0000ff;
 }
 
+/* --- Mobile Menu Button --- */
+#menu-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.45rem;
+    font-weight: 500;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* White text color when the menu is open */
+#menu-btn.is-menu-open {
+    color: white;
+}
+
+/* Arrow icon for the menu button */
+#menu-btn::after {
+    content: "▼";
+    position: absolute;
+    top: 2.1rem;
+    margin-left: 0.7rem;
+    font-size: 0.45rem;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when menu is open */
+#menu-btn.is-menu-open::after {
+    transform: rotate(180deg);
+}
+
+/* --- Mobile Slide-Down Menu --- */
 .mobile-menu {
-    color: #ffffff;
-    background-color: #0000ff;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: start;
-    padding-left: 1.5rem;
-    padding: 1.5rem 1.5rem 0rem 1.5rem;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.3s ease;
     position: absolute;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    background-color: #0000ff;
+    /* Animation properties */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
 }
 
-.mobile-menu.slide-down {
-    max-height: 1000px;
+/* Class to trigger the slide-down animation */
+.mobile-menu.is-visible {
+    max-height: 1000px; /* A large value to allow full expansion */
     opacity: 1;
 }
 
-header, a, h3, p {
+/* All text inside the mobile menu is white */
+.mobile-menu a,
+.mobile-menu h3,
+.mobile-menu p {
     color: #ffffff;
 }
 
-.desktop-nav {
-    display: none;
-}
-
-.mobile-menu-links-primary {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-bottom: 0.8rem;
-}
-
-.mobile-menu-links-secondary {
+/* Spacing for sections within the mobile menu */
+.mobile-menu-section {
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
     padding-bottom: 0.8rem;
 }
 
+.mobile-menu-section:first-child {
+    gap: 1.5rem;
+}
+
+/* --- Horizontal Scrolling Section --- */
 .mobile-menu-horizontal-scroll {
-    overflow-x: auto;
     display: flex;
     gap: 0.5rem;
     padding-block: 1.5rem;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
 .scroll-item {
-    flex: 0 0 auto; /* prevent shrinking or growing */
-    width: 15em;
-    border-radius: 8px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 15em;
+    border-radius: 8px;
 }
 
 .scroll-item p {
@@ -88,109 +128,91 @@ header, a, h3, p {
     color: #ffffff;
 }
 
-
-/* --- MOBILE NAV LINKS ---*/
-/* menu button with transition */
-#menu-btn {
-    border: none;
-    background-color: transparent;
-    font-size: 1.45rem;
-    font-weight: 500;
-    color: black;
-    transition: color 0.3s ease; /* Add this line */
-}
-
-#menu-btn.menu-open {
-    color: white;
-}
-
-
-#menu-btn::after {
-    content: "▼";
-    font-size: 0.45rem;
-    margin-left: 0.7rem;
-    position: absolute;
-    top: 2.1rem;
-    color: inherit;
-    transition: transform 0.3s ease;
-}
-
-#menu-btn.menu-open::after {
-    transform: rotate(180deg); /* rotate arrow */
-}
-
+/* --- Navigation Logo --- */
 .nav-logo {
     width: 35px;
 }
 
-/* === MEDIA QUIERIES === */
-
-/* --- LARGER SCREENS --- */
-@media screen and (min-width: 1000px) { /* exit burger menu */
-    /* visibility */
-    .mobile-header, .mobile-menu {
+/* =================================================================
+   DESKTOP HEADER & NAVIGATION (Large Screens)
+   ================================================================= */
+@media screen and (min-width: 1000px) {
+    /* Hide mobile elements */
+    .mobile-header,
+    .mobile-menu {
         display: none;
     }
 
-    /* text colors */
-    header, a, h3, p {
-        color: #000000;
-    }
-    
-    /* desktop nav */
+    /* Show desktop navigation */
     .desktop-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2.3rem 1rem 2.3rem;
+        padding: 1rem 2.3rem;
     }
-    .primary-nav-right, .primary-nav-left {
+    
+    /* Make header text black again on desktop */
+    header a,
+    header h3,
+    header p {
+        color: #000000;
+    }
+
+    /* --- Primary Desktop Nav --- */
+    .desktop-nav-section-left,
+    .desktop-nav-section-right {
         display: flex;
         align-items: center;
         gap: 1.25rem;
     }
-    .primary-link {
+
+    .desktop-nav .primary-link {
         font-size: 1.15rem;
     }
-    #mega-menu::after {
-    content: " +";
-    color: inherit;
+
+    /* --- "More" Button State --- */
+    #mega-menu-btn::after {
+        content: " +";
     }
-    #mega-menu.active::after {
+
+    #mega-menu-btn.is-open::after {
         content: " -";
     }
 
-    /* secondary nav */
-
-    /* secondary nav layout*/
+    /* --- Secondary Desktop Nav ("Mega Menu") --- */
     .secondary-nav {
-        display: flex;
+        /* display is toggled by JS from none to flex */
         flex-direction: column;
         gap: 2rem;
         padding: 1rem 2.5rem 2.5rem 2.5rem;
     }
-    .secondary-menu-horizontal {
+    
+    .secondary-nav.is-open {
         display: flex;
-        gap: 3rem;
     }
-    .secondary-menu-links a {
+
+    .secondary-menu-section a {
         margin-right: 2rem;
     }
 
-    /* secondary nav text */
+    .secondary-menu-grid {
+        display: flex;
+        gap: 3rem;
+    }
+
+    /* Typography for secondary nav */
     .secondary-nav h2 {
-        font-weight: 500;
         margin-bottom: 0.5rem;
+        font-weight: 500;
     }
     .secondary-nav a {
-        font-weight: 400;
         font-size: 1.25rem;
+        font-weight: 400;
     }
     .secondary-nav p {
         font-size: 1.25rem;
     }
-    .secondary-menu-horizontal a {
+    .secondary-menu-grid a {
         font-weight: 500;
     }
-    
 }

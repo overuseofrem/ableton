@@ -1,65 +1,75 @@
-// mobile menu navigation toggle
-document.addEventListener('DOMContentLoaded', function () {
+/**
+ * FILE: script.js
+ * DESCRIPTION:
+ * - Handles interactive elements on the homepage.
+ * - Manages the mobile menu toggle.
+ * - Manages the desktop "More" dropdown menu.
+ * - Controls the visibility of a scroll-to-articles button.
+ */
+
+// Wait for the DOM to be fully loaded before running any scripts
+document.addEventListener('DOMContentLoaded', () => {
+
+    // =================================================================
+    // MOBILE NAVIGATION TOGGLE
+    // =================================================================
     const menuBtn = document.getElementById('menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileHeader = document.querySelector('.mobile-header');
-    const navLogo = document.querySelector('.nav-logo');
-    menuBtn.addEventListener('click', function () {
+    const navLogo = document.querySelector('.mobile-header .nav-logo'); // More specific selector
 
-        // toggle the slide-down class for animation
-        mobileNav.classList.toggle('slide-down');
-        
-        // toggle the menu-open class for button styling
-        menuBtn.classList.toggle('menu-open');
-        
-        // toggle the menu-active class for header styling
-        mobileHeader.classList.toggle('menu-active');
-        
-        // toggle the logo image based on menu state
-        if (mobileHeader.classList.contains('menu-active')) {
-            navLogo.src = 'assets/icons/gestures-light.png'; // white logo when menu is open
-        } else {
-            navLogo.src = 'assets/icons/gestures-dark.png'; // black logo when menu is closed
-        }
-    });
-});
+    // Ensure all elements exist before adding listeners
+    if (menuBtn && mobileNav && mobileHeader && navLogo) {
+        menuBtn.addEventListener('click', () => {
+            // Toggle classes to trigger CSS animations and style changes.
+            // This is better than manipulating styles directly in JS.
+            const isOpen = mobileNav.classList.toggle('is-visible');
+            
+            menuBtn.classList.toggle('is-menu-open');
+            mobileHeader.classList.toggle('is-menu-active');
+            
+            // Set aria-expanded for accessibility
+            menuBtn.setAttribute('aria-expanded', isOpen);
 
-// More+ menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-    const megaMenuLink = document.getElementById('mega-menu');
+            // Change the logo color based on the menu's state
+            if (isOpen) {
+                navLogo.src = 'assets/icons/gestures-light.png'; // White logo
+            } else {
+                navLogo.src = 'assets/icons/gestures-dark.png'; // Black logo
+            }
+        });
+    }
+
+
+    // =================================================================
+    // DESKTOP "MORE" DROPDOWN TOGGLE
+    // =================================================================
+    const megaMenuBtn = document.getElementById('mega-menu-btn');
     const secondaryNav = document.querySelector('.secondary-nav');
 
-    // initially hide the secondary navigation
-    secondaryNav.style.display = 'none';
+    if (megaMenuBtn && secondaryNav) {
+        megaMenuBtn.addEventListener('click', (event) => {
+            // Prevent the link from navigating to '#'
+            event.preventDefault();
 
-    megaMenuLink.addEventListener('click', (event) => {
-        // prevent the default link behavior (e.g., navigating to '#')
-        event.preventDefault();
+            // Toggle classes on the button and the navigation panel
+            megaMenuBtn.classList.toggle('is-open');
+            secondaryNav.classList.toggle('is-open');
+        });
+    }
 
-        //toggle the display of the secondary navigation
-        if (secondaryNav.style.display === 'none' || secondaryNav.style.display === '') {
-            secondaryNav.style.display = 'flex';
-            megaMenuLink.classList.add('active');
-        } else {
-            secondaryNav.style.display = 'none';
-            megaMenuLink.classList.remove('active'); // Remove the class
-        }
-    });
-});
 
-// btn-scroll
-document.addEventListener('DOMContentLoaded', function() {
-    
+    // =================================================================
+    // SCROLL-TO-ARTICLES BUTTON LOGIC
+    // =================================================================
     const scrollBtn = document.getElementById('scroll-to-articles-btn');
     const firstArticleSection = document.querySelector('.content-wrapper');
 
-    // ensure both elements exist before running
     if (scrollBtn && firstArticleSection) {
 
-        // 1. function to show/hide based on scroll position
+        // Shows/hides the button based on scroll position
         const handleScrollButtonVisibility = () => {
-            // show the button ONLY if the user is at the very top (scrollY is 0).
-            // 10px buffer just in case of browser quirks.
+            // Show the button ONLY if the user is near the top of the page.
             if (window.scrollY < 10) {
                 scrollBtn.classList.add('visible');
             } else {
@@ -67,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        // 2. function to scroll to the articles when clicked
+        // Scrolls the page smoothly to the first article section
         const scrollToArticles = () => {
             firstArticleSection.scrollIntoView({
                 behavior: 'smooth',
@@ -75,11 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
 
-        // 3. event listeners
+        // Attach event listeners
         window.addEventListener('scroll', handleScrollButtonVisibility);
         scrollBtn.addEventListener('click', scrollToArticles);
 
-        // 4. run once on page load to show the button initially
+        // Run once on page load to set the initial state
         handleScrollButtonVisibility();
     }
+
 });

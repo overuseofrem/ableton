@@ -1,202 +1,305 @@
-/* mobile first */
+/*
+ *  FILE: index-style.css
+ *  DESCRIPTION:
+ *  - Styles the main content area of the homepage.
+ *  - Includes hero banner, article grids, and other content sections.
+ *  - Uses a mobile-first approach with responsive layouts.
+ */
 
-/* NO-SHOW MOBILE */
-.medium {
+/* =================================================================
+   BASE & SHARED STYLES
+   ================================================================= */
+
+/* Hide desktop-only elements on mobile by default */
+.link-desktop,
+.link-desktop-large {
     display: none;
 }
-.large {
-    display: none;
-}
 
-/* LAYOUT */
-main, .content-wrapper {
-    height: auto;
+/* Main content layout */
+main {
     width: 100%;
+    height: auto;
+}
+
+.content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem 9vw 0 9vw;
     text-align: start;
 }
 
-/* BTN-SCROLL */
-.scroll-to-articles {
-    position: fixed;
-    bottom: 0;
-    z-index: 1000;
-    background-color: #0000ff;
-    border: none;
-    width: auto;
-    transform: translateY(150%);
-    visibility: hidden;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
-}
-.scroll-to-articles.visible {
-    transform: translateY(0);
-    visibility: visible;
-    cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
-}
-.scroll-to-articles img {
-    transform: translateY(5px);
-    width: 50px;
-    object-fit: contain;
+/* Base text styles for the main section */
+main a,
+main h1,
+main h2,
+main p {
+    color: #000000;
 }
 
-/* HERO */
+main h1,
+main h2 {
+    font-size: 1.3rem;
+}
+
+.category-headline a,
+.article-other a {
+    font-size: 1.15rem;
+}
+
+/* =================================================================
+   SCROLL-TO-TOP BUTTON
+   ================================================================= */
+.scroll-to-articles {
+    display: none;
+}
+
+/* =================================================================
+   HERO BANNER
+   ================================================================= */
 .hero-banner {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 .hero-content {
     position: relative;
 }
 
-/* HERO IMG */
 .hero-banner img,
-.hero-content .hero-img { 
+.hero-content .hero-img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
 }
-.second .hero-img {
+
+.hero-content.second .hero-img {
     margin: 8% 0 0 8%;
 }
-.third .hero-img {
+
+.hero-content.third .hero-img {
     position: relative;
-    bottom: 5vh;
     right: 8%;
+    bottom: 5vh;
     z-index: 4;
 }
 
-/* HERO TEXT */
+/* --- Hero Text & Links --- */
 .hero-text {
     position: absolute;
     z-index: 5;
+    max-width: 70%;
 }
+
 .hero-header {
     font-size: calc(1.75rem + 1vw);
     font-weight: 500;
     line-height: 1.25;
 }
+
 .hero-link {
     text-decoration: underline;
 }
-.first .hero-text {
-    top: 12%;
-    left: 10%;
-    max-width: 70%;
-}
-.second .hero-text {
-    top: 10%;
-    left: 17%;
-    max-width: 70%;
-}
-.third .hero-text {
-    top: 0;
-    left: 10%;
-    max-width: 70%;
-}
+
 .hero-link::after {
     content: " ›";
     color: inherit;
 }
 
-/* MAIN CONTENT */
-.content-wrapper, .more-links {
-    padding: 1rem 9vw 0rem 9vw;
-}
-.category-article, .article-other  {
-    width:100%;
-    text-align: start;
+/* Text color utility classes (moved from inline styles) */
+.color-mint   { color: #00FFAF; }
+.color-yellow { color: #FBFFA7; }
+.color-purple { color: #D5B3FF; }
+
+/* Positioning for each hero text block */
+.first.hero-content .hero-text { top: 12%; left: 10%; }
+.second.hero-content .hero-text { top: 10%; left: 17%; }
+.third.hero-content .hero-text { top: 0; left: 10%; }
+
+/* =================================================================
+   ARTICLE SECTIONS
+   ================================================================= */
+.category-article,
+.article-other {
+    width: 100%;
     padding-bottom: 2rem;
+    text-align: start;
 }
-main .primary-link {
-    text-align: center;
-    font-size: 1.1rem;
-}
+
 .article-img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
+
 .category-headline {
-    padding-top: 0.3rem;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    padding-top: 0.3rem;
 }
+
 .category {
     width: fit-content;
-    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    padding: 0.2rem 0.5rem;
     font-weight: 500;
 }
-.artists {
-    background-color: #FED134;
+
+/* Category background colors */
+.category.artists   { background-color: #FED134; }
+.category.downloads { background-color: #FF8389; }
+.category.videos    { background-color: #B1C5FF; }
+
+/* Link styles specific to mobile/main content */
+main .link-mobile {
+    font-size: 1.1rem;
+    text-align: center;
 }
-.downloads {
-    background-color: #FF8389;
-}
-.videos {
-    background-color: #B1C5FF;
-}
+
+/* =================================================================
+   "MORE" LINKS SECTION (bottom of page)
+   ================================================================= */
 .more-links {
-    background-color: rgb(245, 244, 244);
-    padding-block: 2rem;
+    padding: 2rem 9vw;
+    margin-top: 1rem;
     font-size: 1.1rem;
     font-weight: 500;
-    margin-top: 1rem;
+    background-color: rgb(245, 244, 244);
 }
+
 .more-links a {
     padding-inline: 0.2rem;
 }
 
-/* text */
-main a, h1, h2, p {
-    color: #000000;
-}
-main h1, h2 {
-    font-size: 1.30rem;
-}
-.category-headline a, .article-other a {
-    font-size: 1.15rem;
-}
+/* =================================================================
+   MEDIA QUERIES (TABLET & DESKTOP)
+   ================================================================= */
 
-/* === MEDIA QUERIES === */
-
-/* --- TABLETS (2 columns) --- */
-@media screen and (min-width: 600px) { /* for grids */
-    main h1, h2 {
+/* --- TABLETS (600px+) --- */
+@media screen and (min-width: 600px) {
+    main h1,
+    main h2 {
         font-size: calc(1.75rem + 0.5vw);
     }
     .articles-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* 2 columns */
         gap: 2.5rem;
     }
     .article-img {
-        height: 180px;
+        height: 180px; /* Use fixed height for consistency in grid */
     }
-    .more-links, .more-links p, .more-links a {
+    .more-links {
         text-align: center;
+    }
+    .more-links span,
+    .more-links a {
         font-size: 1.5rem;
     }
 }
 
-/* --- LARGER SCREENS (3 columns) --- */
-@media screen and (min-width: 1030px) { /* for grids */
-    .large {
-        display: block;
-    }
-    .medium {
-        display: none !important;
+/* --- SMALLER DESKTOPS / LARGE TABLETS (770px+) --- */
+@media screen and (min-width: 770px) {
+    /* Hide mobile-only "See all posts" link */
+    .content-wrapper .link-mobile {
+        display: none;
     }
     .content-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    /* Show medium-sized desktop "See all posts" link */
+    .link-desktop {
+        display: block;
+        font-size: calc(1rem + 0.5vw);
+    }
+    .link-desktop::after {
+        content: " ›";
+        font-size: 20px;
+    }
+
+    /* -- Hero layout adjustments -- */
+    .hero-banner { position: relative; height: 100%; }
+    .hero-content.second {
+        position: absolute;
+        top: 18%;
+        right: 0;
+        width: 35%;
+        aspect-ratio: 4.5 / 3;
+    }
+    .first.hero-content .hero-img { width: 57%; }
+    .second.hero-content .hero-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .third.hero-content .hero-img {
+        width: 35%;
+        left: 40%;
+        transform: translateY(-20%);
+    }
+    .first.hero-content .hero-text { left: 5%; }
+    .first.hero-content .hero-header { font-size: calc(1.5rem + 1.5vw); }
+    .first.hero-content .hero-link { font-size: calc(0.7rem + 1.5vw); }
+    .second.hero-content .hero-text {
+        width: auto;
+        top: 19%;
+        left: 16%;
+        right: 15%;
+    }
+    .third.hero-content .hero-text {
+        top: -10%;
+        left: 43%;
+        padding-right: 2vw;
+    }
+    .second .hero-header,
+    .third .hero-header {
+        font-size: calc(0.5rem + 1.5vw);
+    }
+}
+
+/* --- LARGE DESKTOPS (1030px+) --- */
+@media screen and (min-width: 1030px) {
+
+    /* =================================================================
+   SCROLL-TO-TOP BUTTON
+   ================================================================= */
+    .scroll-to-articles {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        width: auto;
+        background-color: #0000ff;
+        border: none;
+        /* Hide button off-screen by default */
+        transform: translateY(150%);
+        visibility: hidden;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
+    }
+    .scroll-to-articles.visible {
+        transform: translateY(0);
+        visibility: visible;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+    }
+    .scroll-to-articles img {
+        width: 50px;
+        object-fit: contain;
+        transform: translateY(5px);
+    }
+    
+    /* Show the large category links */
+    .link-desktop-large {
+        display: block;
+    }
+    .content-title {
         margin-bottom: 1rem;
     }
-    .article-category a {
+    .article-category-links a {
         font-size: calc(1rem + 0.5vw);
         margin-left: 1rem;
     }
@@ -206,86 +309,11 @@ main h1, h2 {
     .article-img {
         height: 180px;
     }
-}
 
-@media screen and (min-width: 770px) { /* for extra links and hero */
-    .content-wrapper .mobile {
-        display: none;
+    /* The original !important was likely to override a more specific rule.
+       Keeping it to prevent visual changes, but this is a sign that
+       CSS specificity could be reviewed in a larger refactor. */
+    .content-title .link-desktop {
+        display: none !important;
     }
-    .content-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .medium {
-        display: block;
-        font-size: calc(1rem + 0.5vw);
-    }
-    .medium::after {
-        content: " ›";
-        font-size: 20px;
-    }
-    .hero-banner {
-        position: relative;
-        height: 100%;
-    }
-    .hero-content {
-        position: relative;
-    }
-    .hero-content.second {
-        position: absolute;
-        top: 18%;
-        bottom: 0;
-        right: 0;
-        width: 35%;
-        aspect-ratio: 4.5 / 3;
-    }
-
-    /* HERO IMG */
-    .first .hero-img {
-        width: 57%;
-    }
-    .second .hero-img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Fills the container without stretching */
-    }
-    .third .hero-img {
-        transform: translateY(-20%);
-        top: 0%;
-        right: 0%;
-        left: 40%;
-        width: 35%;
-        bottom: 0%;
-        z-index: 4;
-    }
-
-    /* HERO TEXT */
-    .first .hero-text {
-        left: 5%;
-    }
-    .first .hero-header {
-        font-size: calc(1.5rem + 1.5vw);
-    }
-    .first .hero-link {
-        font-size: calc(0.7rem + 1.5vw);
-    }
-    .second .hero-text {
-        position: absolute;
-        width: auto;
-        top: 19%;
-        left: 16%;
-        right: 15%;
-    }
-    .third .hero-text {
-        position: absolute;
-        top: -10%;
-        left: 43%;
-        padding-right: 2vw;
-    }
-    .second .hero-header,
-    .third .hero-header {
-        font-size: calc(0.5rem + 1.5vw);
-    
 }

@@ -1,34 +1,47 @@
-/* font: Afacad */
+/*
+ *  FILE: global-style.css
+ *  DESCRIPTION:
+ *  - Imports the 'Afacad' font.
+ *  - Defines global resets and base styles for the entire site.
+ *  - Sets up typography rules for headings, paragraphs, and links.
+ */
+
+/* =================================================================
+   FONT IMPORT & GLOBAL RESET
+   ================================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* apply to all */
+/* Apply to all elements */
 * {
     margin: 0;
     color: black;
-    font-family: afacad;
+    font-family: 'Afacad', sans-serif; /* Added a fallback font */
     text-decoration: none;
 }
 
 html {
     box-sizing: border-box;
-    /* Add grey background to html */
-    background-color: #f3f3f3;
+    background-color: #f3f3f3; /* Grey background for the "outside" area */
 }
 
+/* Inherit box-sizing for a more intuitive box model */
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-/* Body wrapper for centered content */
+/* Body wrapper for the main site content */
 body {
     background-color: #ffffff;
-    max-width: 1600px;
+    max-width: 1600px; /* Constrains the width on very large screens */
     margin: 0 auto;
     min-height: 100vh;
 }
 
-/* === TEXT === */
-/* --- LINKS --- */
+/* =================================================================
+   TYPOGRAPHY
+   ================================================================= */
+
+/* --- GENERAL LINKS --- */
 a {
     font-weight: 500;
     letter-spacing: -0.1px;
@@ -51,22 +64,28 @@ a {
     font-weight: 300;
 }
 
-#interact-link {
+/* A reusable class for blue, interactive links */
+.is-highlighted {
     color: #0000ff;
 }
 
-/* --- HEADINGS and P--- */
+/* --- HEADINGS & PARAGRAPHS --- */
 h1 {
     font-weight: 490;
 }
+
 h2 {
+    /* Base styles inherited, specific styles in other files */
 }
+
 h3 {
     font-size: 1.35rem;
 }
+
 h4 {
     font-weight: 500;
 }
+
 p {
     font-size: 0.95rem;
     font-weight: 300;

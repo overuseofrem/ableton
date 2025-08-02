@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ableton - Recreate</title>
 
-    <!-- stylesheets -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/global-style.css">
     <link rel="stylesheet" href="styles/header-style.css">
     <link rel="stylesheet" href="styles/footer-style.css">
     <link rel="stylesheet" href="styles/index-style.css">
 </head>
 <body>
+
+    <!-- =================================================================
+    HEADER SECTION
+    Contains mobile and desktop navigation.
+    ================================================================== -->
     <header>
-        <!-- Mobile Header -->
+        <!-- Mobile Header (Visible on small screens) -->
         <div class="mobile-header">
-                <img src="assets/icons/gestures-dark.png" alt="Logo" class="nav-logo" />
-                <button id="menu-btn" aria-label="Toggle menu">Menu</button>
+            <img src="assets/icons/gestures-dark.png" alt="Ableton Logo" class="nav-logo" />
+            <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
         </div>
 
-        <!-- Mobile Navigation -->
-        <nav id="mobile-nav" class="mobile-menu hidden">
-            
+        <!-- Mobile Navigation (Hidden by default, toggled by JS) -->
+        <nav id="mobile-nav" class="mobile-menu">
             <!-- Primary Links -->
-            <div class="mobile-menu-links-primary">
+            <div class="mobile-menu-section">
                 <a href="#" class="primary-link">Live</a>
                 <a href="#" class="primary-link">Push</a>
                 <a href="#" class="primary-link">Move</a>
@@ -36,8 +40,8 @@
                 <a href="#" class="secondary-link">Login or register</a>
             </div>
 
-            <!-- Extra Links -->
-            <div class="mobile-menu-links-secondary">
+            <!-- "More on Ableton.com" Links -->
+            <div class="mobile-menu-section">
                 <h3>More on Ableton.com:</h3>
                 <a href="#" class="secondary-link">Blog</a>
                 <a href="#" class="secondary-link">Ableton for the Classroom</a>
@@ -48,10 +52,10 @@
                 <a href="#" class="secondary-link">Apprenticeships</a>
             </div>
 
-            <div class="mobile-menu-links-tertiary">
+            <!-- "More from Ableton" Links (Horizontal Scroll) -->
+            <div class="mobile-menu-section">
                 <h3>More from Ableton:</h3>
                 <div class="mobile-menu-horizontal-scroll">
-                    <!-- Cards or blocks for extra links -->
                     <div class="scroll-item">
                         <a href="#" class="secondary-link">Loop</a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat in nunc fringilla sodales.</p>
@@ -72,10 +76,10 @@
             </div>
         </nav>
 
-        <!-- Desktop Navigation (hidden on mobile) -->
+        <!-- Desktop Navigation (Hidden on mobile) -->
         <nav class="desktop-nav">
-            <div class="primary-nav-right">
-                <img src="assets/icons/gestures-dark.png" alt="" class="nav-logo" />
+            <div class="desktop-nav-section-left">
+                <img src="assets/icons/gestures-dark.png" alt="Ableton Logo" class="nav-logo" />
                 <a href="#" class="primary-link">Live</a>
                 <a href="#" class="primary-link">Push</a>
                 <a href="#" class="primary-link">Move</a>
@@ -84,18 +88,18 @@
                 <a href="#" class="primary-link">Shop</a>
                 <a href="#" class="primary-link">Packs</a>
                 <a href="#" class="primary-link">Help</a>
-                <a href="#" class="primary-link" id="mega-menu">More</a>
+                <a href="#" class="primary-link" id="mega-menu-btn">More</a>
             </div>
-            <div class="primary-nav-left">
-                <a href="#" class="primary-link" id="interact-link">Try Live 12 for free</a>
+            <div class="desktop-nav-section-right">
+                <a href="#" class="primary-link is-highlighted">Try Live 12 for free</a>
                 <a href="#" class="secondary-link">Login or register</a>
             </div>
         </nav>
 
-        <!-- Secondary nav (desktop only, hidden) -->
+        <!-- Secondary Desktop Navigation (Toggled by "More" button) -->
          <nav class="secondary-nav">
-            <!-- Extra Links -->
-            <div class="secondary-menu-links">
+            <!-- "More on Ableton.com" Links -->
+            <div class="secondary-menu-section">
                 <h2>More on Ableton.com:</h2>
                 <a href="#" class="primary-link">Blog</a>
                 <a href="#" class="primary-link">Ableton for the Classroom</a>
@@ -106,10 +110,10 @@
                 <a href="#" class="primary-link">Apprenticeships</a>
             </div>
 
-            <div class="secondary-menu-links-tertiary">
+            <!-- "More from Ableton" Links (Grid) -->
+            <div class="secondary-menu-section">
                 <h2>More from Ableton:</h2>
-                <div class="secondary-menu-horizontal">
-                    <!-- Cards or blocks for extra links -->
+                <div class="secondary-menu-grid">
                     <div class="secondary-menu-item">
                         <a href="#" class="primary-link">Loop</a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -131,122 +135,136 @@
          </nav>
     </header>
 
+    <!-- =================================================================
+    MAIN CONTENT
+    ================================================================== -->
     <main>
+        <!-- Hero Banner Section -->
         <div class="hero-banner">
             <div class="hero-content first">
-                <img src="assets/img/nemesia-production-Tlos_eXkr_U-unsplash.jpg" alt="" class="hero-img">
+                <img src="assets/img/nemesia-production-Tlos_eXkr_U-unsplash.jpg" alt="A person using a synthesizer in a colorful studio." class="hero-img">
                 <div class="hero-text">
-                    <h1 class="hero-header" style="color:#00FFAF;">We've got new stuff!</h1>
-                    <a href="" class="hero-link" style="color:#00FFAF;">See what's in store</a> 
+                    <h1 class="hero-header color-mint">We've got new stuff!</h1>
+                    <a href="#" class="hero-link color-mint">See what's in store</a> 
                 </div>
             </div>
             <div class="hero-content second">
-                <img src="assets/img/pexels-cristian-rojas-7586650.jpg" alt="" class="hero-img">
+                <img src="assets/img/pexels-cristian-rojas-7586650.jpg" alt="A close-up of a DJ mixer and turntables." class="hero-img">
                 <div class="hero-text">
-                    <h1 class="hero-header" style="color:#FBFFA7;">Interesting events just happened!</h1>
-                    <a href="" class="hero-link" style="color:#FBFFA7;">Learn more</a>
+                    <h1 class="hero-header color-yellow">Interesting events just happened!</h1>
+                    <a href="#" class="hero-link color-yellow">Learn more</a>
                 </div>
             </div>
             <div class="hero-content third">
-                <img src="assets/img/pexels-brett-sayles-4001264.jpg" alt="" class="hero-img">
+                <img src="assets/img/pexels-brett-sayles-4001264.jpg" alt="A musician playing a guitar on a dimly lit stage." class="hero-img">
                 <div class="hero-text">
-                    <h1 class="hero-header" style="color:#D5B3FF;">Watch this thing we have!</h1>
-                    <a href="" class="hero-link" style="color:#D5B3FF;">See the video</a>
+                    <h1 class="hero-header color-purple">Watch this thing we have!</h1>
+                    <a href="#" class="hero-link color-purple">See the video</a>
                 </div>
             </div>
         </div>
 
+        <!-- "Latest from Ableton" Section -->
         <section class="content-wrapper">
             <div class="content-title">
                 <h1>The latest from Ableton</h1>
-                <a href="#" class="primary-link medium" id="interact-link">See all posts</a>
-                <div class="article-category large">
-                    <a href="#" class="primary-link" id="interact-link">All posts</a>
-                    <a href="#" class="primary-link" id="interact-link">Artists</a>
-                    <a href="#" class="primary-link" id="interact-link">News</a>
-                    <a href="#" class="primary-link" id="interact-link">Downloads</a>
-                    <a href="#" class="primary-link" id="interact-link">Tutorials</a>
-                    <a href="#" class="primary-link" id="interact-link">Videos</a>
-                    <a href="#" class="primary-link" id="interact-link">Loop</a>
+                <a href="#" class="primary-link link-desktop is-highlighted">See all posts</a>
+                <div class="article-category-links link-desktop-large">
+                    <a href="#" class="primary-link is-highlighted">All posts</a>
+                    <a href="#" class="primary-link">Artists</a>
+                    <a href="#" class="primary-link">News</a>
+                    <a href="#" class="primary-link">Downloads</a>
+                    <a href="#" class="primary-link">Tutorials</a>
+                    <a href="#" class="primary-link">Videos</a>
+                    <a href="#" class="primary-link">Loop</a>
                 </div>
             </div>
             <div class="articles-grid">
                 <article class="category-article">
-                    <img src="assets/img/2h-media-w5rUb-2Sl2s-unsplash.jpg" alt="" class="article-img">
+                    <img src="assets/img/2h-media-w5rUb-2Sl2s-unsplash.jpg" alt="Abstract digital art with flowing lines." class="article-img">
                     <div class="category-headline">
                         <span class="category artists">Artists</span>
-                        <a>Spill Tab: Playing Musical Chairs</a>
+                        <a href="#">Spill Tab: Playing Musical Chairs</a>
                     </div>
                 </article>
                 <article class="category-article">
-                    <img src="assets/img/aluminum-disemboweler3000-36H1exLSfIw-unsplash.jpg" alt="" class="article-img">
+                    <img src="assets/img/aluminum-disemboweler3000-36H1exLSfIw-unsplash.jpg" alt="A person looking at a computer screen with audio software." class="article-img">
                     <div class="category-headline">
                         <span class="category downloads">Downloads</span>
-                        <a>Purelink: Matching The Bliss</a>
+                        <a href="#">Purelink: Matching The Bliss</a>
                     </div>
                 </article>
                 <article class="category-article">
-                    <img src="assets/img/engin-akyurt-VFKxeErl3O0-unsplash.jpg" alt="" class="article-img">
+                    <img src="assets/img/engin-akyurt-VFKxeErl3O0-unsplash.jpg" alt="A vintage synthesizer with many knobs and sliders." class="article-img">
                     <div class="category-headline">
                         <span class="category videos">Videos</span>
-                        <a>Rival Consoles: Making Landscape from Memory</a>
+                        <a href="#">Rival Consoles: Making Landscape from Memory</a>
                     </div>
                 </article>
             </div>
-            <a href="#" class="primary-link mobile" id="interact-link">See all posts ></a>
+            <a href="#" class="primary-link link-mobile is-highlighted">See all posts ></a>
         </section>
+
+        <!-- "Move in Focus" Section -->
         <section class="content-wrapper">
             <h2>Move in Focus</h2>
             <div class="articles-grid">
                 <article class="article-other">
-                    <img src="assets/img/pexels-aleksandr-neplokhov-486399-2601191.jpg" alt="" class="article-img">
-                    <a>Your Move Questions, Answered</a>
+                    <img src="assets/img/pexels-aleksandr-neplokhov-486399-2601191.jpg" alt="Close-up of a person's hands on a MIDI controller." class="article-img">
+                    <a href="#">Your Move Questions, Answered</a>
                 </article>
                 <article class="article-other">
-                    <img src="assets/img/pexels-ron-lach-8100061.jpg" alt="" class="article-img">
-                    <a>Your Move Questions, Answered</a>
+                    <img src="assets/img/pexels-ron-lach-8100061.jpg" alt="A young person wearing headphones and using a laptop." class="article-img">
+                    <a href="#">Your Move Questions, Answered</a>
                 </article>
                 <article class="article-other">
-                    <img src="assets/img/piero-nigro-32iFwgKW80I-unsplash.jpg" alt="" class="article-img">
-                    <a>Your Move Questions, Answered</a>
+                    <img src="assets/img/piero-nigro-32iFwgKW80I-unsplash.jpg" alt="A dramatic shot of a piano keyboard." class="article-img">
+                    <a href="#">Your Move Questions, Answered</a>
                 </article>
             </div>
         </section>
+
+        <!-- "Learn More about Live 12" Section -->
         <section class="content-wrapper">
             <h2>Learn More about Live 12</h2>
             <div class="articles-grid">
                 <article class="article-other">
-                    <img src="assets/img/tobias-tullius-yoT88Qjmsqo-unsplash.jpg" alt="" class="article-img">
-                    <a>Live 12 generic headline lol</a>
+                    <img src="assets/img/tobias-tullius-yoT88Qjmsqo-unsplash.jpg" alt="An audio waveform displayed on a screen." class="article-img">
+                    <a href="#">Live 12 generic headline lol</a>
                 </article>
                 <article class="article-other">
-                    <img src="assets/img/joel-timothy-GOHVk42mAFo-unsplash.jpg" alt="" class="article-img">
-                    <a>Live 12 generic headline lol</a>
+                    <img src="assets/img/joel-timothy-GOHVk42mAFo-unsplash.jpg" alt="An overhead view of a music production setup." class="article-img">
+                    <a href="#">Live 12 generic headline lol</a>
                 </article>
                 <article class="article-other">
-                    <img src="assets/img/pexels-mikhail-nilov-7989066.jpg" alt="" class="article-img">
-                    <a>Live 12 generic headline lol</a>
+                    <img src="assets/img/pexels-mikhail-nilov-7989066.jpg" alt="A person adjusting knobs on a sound mixer." class="article-img">
+                    <a href="#">Live 12 generic headline lol</a>
                 </article>
             </div>
         </section>
 
+        <!-- "More" Links Section -->
         <aside class="more-links">
             <span>More: </span>
-            <a href="#" class="primary-link" id="interact-link">All posts</a>
-            <a href="#" class="primary-link" id="interact-link">Artists</a>
-            <a href="#" class="primary-link" id="interact-link">News</a>
-            <a href="#" class="primary-link" id="interact-link">Downloads</a>
-            <a href="#" class="primary-link" id="interact-link">Tutorials</a>
-            <a href="#" class="primary-link" id="interact-link">Videos</a>
-            <a href="#" class="primary-link" id="interact-link">Loop</a>
-            <a href="#" class="primary-link" id="interact-link">One Thing</a>
+            <a href="#" class="primary-link is-highlighted">All posts</a>
+            <a href="#" class="primary-link">Artists</a>
+            <a href="#" class="primary-link">News</a>
+            <a href="#" class="primary-link">Downloads</a>
+            <a href="#" class="primary-link">Tutorials</a>
+            <a href="#" class="primary-link">Videos</a>
+            <a href="#" class="primary-link">Loop</a>
+            <a href="#" class="primary-link">One Thing</a>
         </aside>
     </main>
 
+    <!-- Scroll-to-Top Button (Initially hidden) -->
     <button id="scroll-to-articles-btn" class="scroll-to-articles" aria-label="Scroll to articles">
-        <img src="assets/icons/arrow-down.png" alt="arrow-down-icon">
+        <img src="assets/icons/arrow-down.png" alt="An arrow pointing down.">
     </button>
 
+    <!-- =================================================================
+    FOOTER SECTION
+    ================================================================== -->
     <footer>
         <h1>Ableton</h1>
         <div class="footer-content">
@@ -272,7 +290,7 @@
             <div class="footer-item">
                 <h4>Community</h4>
                 <a href="#" class="footer-link">Find Ableton User Groups</a>
-                <a href="#" class="footer-link">FInd Certified Training</a>
+                <a href="#" class="footer-link">Find Certified Training</a>
                 <a href="#" class="footer-link">Become a Certified Trainer</a>
             </div>
             <div class="footer-item">
@@ -280,26 +298,25 @@
                 <div class="language-location-selectors">
                     <div class="custom-select short">
                         <select name="language">
-                        <option value="kh">Khmer</option>
-                        <option value="en">English</option>
-                        <option value="fr">French</option>
-                        <option value="es">Spanish</option>
+                            <option value="kh">Khmer</option>
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
                         </select>
                     </div>
-
                     <div class="custom-select long">
                         <select name="location">
-                        <option value="kh">Cambodia</option>
-                        <option value="us">United States</option>
-                        <option value="ca">Canada</option>
-                        <option value="uk">United Kingdom</option>
+                            <option value="kh">Cambodia</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-fine">
-            <div class="footer-fine-item">
+        <div class="footer-fine-print">
+            <div class="footer-fine-print-links">
                 <a href="#" class="fine-link">Contact Us</a>
                 <a href="#" class="fine-link">Press Resources</a>
                 <a href="#" class="fine-link">Corporate Information</a>
@@ -308,14 +325,14 @@
                 <a href="#" class="fine-link">Imprint</a>
             </div>
             <div class="footer-brand">
-                <img src="assets/icons/gestures-dark.png" alt="Logo" class="footer-logo" />
+                <img src="assets/icons/gestures-dark.png" alt="Ableton Logo" class="footer-logo" />
                 <h4>Made in Berlin</h4>
             </div>  
         </div>
     </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
 </body>
-
-<!-- SCRIPT -->
-<script src="script.js"></script>
-
 </html>

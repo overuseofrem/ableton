@@ -1,10 +1,20 @@
-/* === MOBILE-FIRST === */
-footer a, h1, h4, p {
-    color: black;
-}
+/*
+ *  FILE: footer-style.css
+ *  DESCRIPTION:
+ *  - Styles the footer section, including links, forms, and branding.
+ *  - Uses a mobile-first approach.
+ */
 
-/* --- LAYOUT --- */
-footer, .footer-content, .footer-item, .footer-fine, .footer-fine-item {
+/* =================================================================
+   MOBILE FOOTER (Default)
+   ================================================================= */
+
+/* --- Layout --- */
+footer,
+.footer-content,
+.footer-item,
+.footer-fine-print,
+.footer-fine-print-links {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -14,12 +24,18 @@ footer {
     padding: 2.6rem;
 }
 
-.footer-item {
-    gap: 0.2rem;
-    
+footer a,
+footer h1,
+footer h4,
+footer p {
+    color: black;
 }
 
-.footer-fine-item {
+.footer-item {
+    gap: 0.2rem;
+}
+
+.footer-fine-print-links {
     gap: 0.7rem;
 }
 
@@ -30,16 +46,16 @@ footer {
     padding-top: 1rem;
 }
 
-/* --- FORMS ---*/
+/* --- Forms --- */
 
-/* newsletter form */
+/* Newsletter Sign-up Form */
 .newsletter-form {
     display: flex;
     margin-top: 0.5rem;
 }
 
 .newsletter-form input[type="email"] {
-    flex: 1;
+    flex: 1; /* Allows input to grow and fill space */
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     font-size: 1em;
     background-color: #eee;
@@ -47,20 +63,20 @@ footer {
 }
 
 .newsletter-form button {
-    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     font-size: 1rem;
-    background-color: #0000ff;
-    color: white;
     font-weight: 500;
+    color: white;
+    background-color: #0000ff;
     border: none;
     cursor: pointer;
 }
 
 .newsletter-form button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* A simple hover state */
 }
 
-/* language/location selection form */
+/* Language/Location Selectors */
 .language-location-selectors {
     display: flex;
     gap: 4px;
@@ -68,33 +84,33 @@ footer {
 }
 
 .custom-select {
-    position: relative;
+    position: relative; /* Needed for positioning the arrow */
 }
 
 .custom-select select {
-  width: 100%;
-  appearance: none;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  font-size: 1em;
-  font-weight: 500;
-  border: none;
-  background-color: #eee;
-  cursor: pointer;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    appearance: none; /* Removes default browser arrow */
 }
 
-/* dropdown arrows */
+/* Custom dropdown arrow */
 .custom-select::after {
     content: "▼";
     position: absolute;
-    font-size: 0.5rem;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    pointer-events: none;
+    font-size: 0.5rem;
     color: #000;
+    pointer-events: none; /* Allows clicks to pass through to the select */
 }
 
-/* dropdown widths */
+/* Widths for the two selectors */
 .custom-select.short {
     flex: 0 0 110px;
 }
@@ -103,27 +119,28 @@ footer {
     flex: 0 0 160px;
 }
 
-/* --- Links? --- */
+/* --- Misc --- */
+
+/* Arrow after footer links */
 .footer-link::after {
     content: " ›";
     color: inherit;
 }
 
-/* --- footer logo */
+/* Footer logo size */
 .footer-logo {
     width: 30px;
 }
 
-/* === MEDIA QUIERIES === */
-
-/* --- LARGER SCREENS --- */
+/* =================================================================
+   DESKTOP FOOTER (Large Screens)
+   ================================================================= */
 @media screen and (min-width: 1000px) {
     footer {
-        padding-inline: 11%;
-        padding-block: 6rem;
+        padding: 6rem 11%;
     }
 
-    h1 {
+    footer > h1 {
         font-size: 4rem;
     }
 
@@ -134,35 +151,20 @@ footer {
         padding-bottom: 1rem;
     }
 
-    /* reordering for desktop */
-    .footer-item:nth-child(1) { /* Newsletter */
-        order: 3;
-    }
+    /* Reordering footer items for the desktop grid layout */
+    .footer-item:nth-child(1) { order: 3; } /* Newsletter */
+    .footer-item:nth-child(2) { order: 1; } /* Register Links */
+    .footer-item:nth-child(3) { order: 2; } /* Education */
+    .footer-item:nth-child(4) { order: 4; } /* Community */
+    .footer-item:nth-child(5) { order: 5; } /* Language */
 
-    .footer-item:nth-child(2) { /* Register Live, Push or Move */
-        order: 1;
-    }
-
-    .footer-item:nth-child(3) { /* Education */
-        order: 2;
-    }
-
-    .footer-item:nth-child(4) { /* Community */
-        order: 4;
-    }
-
-    .footer-item:nth-child(5) { /* Language and Location */
-        order: 5;
-    }
-
-    .footer-fine {
+    .footer-fine-print {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .footer-fine-item {
+    .footer-fine-print-links {
         flex-direction: row;
         align-items: center;
     }
-
 }

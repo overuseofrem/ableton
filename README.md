@@ -75,7 +75,7 @@ this is a **work-in-progress**. hopefully i actually finish it.
 - [X]  btn-scroll
 
 #### final stuff
-- [ ] final code cleanup and commenting
+- [X] final code cleanup and commenting
 - [X] deploy the site to Github Pages
 - [X] add the live site link to the top of the README
 

@@ -81,7 +81,10 @@ this is **completed**! hooray!
 
 <br>
 
-## 📝 license
+## 📝 Disclaimer
 
-this project is for **educational purposes only** and is not affiliated with with or endorsed by Ableton.  
-all original content belongs to Ableton. this clone is not intended for commercial use.
+This is a fan-made, non-commercial project created for educational and recreational purposes only.  
+All text content, links, and branding elements in this project are copied from the Ableton website for practice purposes.  
+All images, icons, and other media are sourced from free-to-use platforms (e.g., Unsplash, Boxicons) or replaced with placeholders.  
+This project is not affiliated with, endorsed, sponsored, or specifically approved by Ableton AG.  
+All original code in this repository is licensed under the [MIT License](LICENSE).

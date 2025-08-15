@@ -1,83 +1,83 @@
 # Ableton website home page recreation (Frontend Practice)
 
-a responsive front-end recreation of the [Ableton](https://www.ableton.com/en/) website's home page. this is a self-directed challenge from [Frontend Practice](https://www.frontendpractice.com/projects/ableton) to improve my layout, design, and vanilla javascript skills. also, because it's fun.
+A responsive front-end recreation of the [Ableton](https://www.ableton.com/en/) website's home page. This is a self-directed challenge from [Frontend Practice](https://www.frontendpractice.com/projects/ableton) to improve my layout, design, and vanilla JavaScript skills. Also, because it's fun.
 
 👉 [Github Page link](https://overuseofrem.github.io/ableton-home-page/)
 
 <br>
 
-## 📌 about the project
+## 📌 About the project
 
-the goal is to recerate the structure, appearance, and behavior of the **Ableton website**. specifically, *only* their **homepage** page.
-this is a **pure front-end project**: no frameworks, libraries, or build tools. just pure **html**, **css**, and **javascript**. 🙃
+The goal is to recerate the structure, appearance, and behavior of the **Ableton website**. Specifically, *only* their **homepage** page.
+This is a **pure front-end project**: no frameworks, libraries, or build tools. just pure **HTML**, **CSS**, and **JavaSript**. 🙃
 
-> ❗this is a personal practice project! all banding, content, and design elements remain the property of Ableton. this clone is for educational, recreational, and non-commercial use only.
-> images, and text may be replaced with placeholders or free-to-use alternatives.
-
-<br>
-
-## 🍮 features?
-
-- mobile-first layout (because i've been blind; stuck on desktop-first 😔)
-- responsive design
-- page-by-page receration (depends lol)
-- vanilla HTML/CSS/javascript only
-- layout, hover states, and interaction mimicry (attempt)
+> ❗This is a personal practice project! all banding, content, and design elements remain the property of Ableton. This clone is for educational, recreational, and non-commercial use only.
+> Images, and text may be replaced with placeholders or free-to-use alternatives.
 
 <br>
 
-## 🔧 tech stack
+## 🍮 Features
+
+- Mobile-first layout (because i've been blind; stuck on desktop-first 😔)
+- Responsive design
+- Page-by-page receration (depends lol)
+- Vanilla HTML/CSS/JavaScript only
+- Layout, hover states, and interaction mimicry (attempt)
+
+<br>
+
+## 🔧 Tech stack
 
 - HTML5
 - CSS3 (flexbox, grid)
-- javascript (vanilla)
+- JavaScript (vanilla)
 
-no frameworks or tooling (e.g., no React, Tailwind, or Webpack)
+No frameworks or tooling (e.g., no React, Tailwind, or Webpack)
 
 <br>
 
-## 📷 sources i used
+## 📷 Sources
 
 - [Frontend Practice](https://www.frontendpractice.com/projects/ableton) challenge site
-- the [Ableton website](https://www.ableton.com/en/)
-- for images: [pexels](https://www.pexels.com/) and [unsplash](https://unsplash.com/)
-- for icons: [boxicons](https://boxicons.com/)
+- The [Ableton website](https://www.ableton.com/en/)
+- For images: [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/)
+- For icons: [Boxicons](https://boxicons.com/)
 
 <br>
 
-## ⏳ status
+## ⏳ Status
 
-this is **completed**! hooray!
+This is **completed**!
 
-#### page structure (HTML)
-- [X] build the header/nav (desktop)
-- [X] build the header/nav (mobile)
-- [X] build the 'more+' menu
-- [X] build the hero banner
-- [X] build the main content
-- [X] build the btn-scroll
-- [X] build the html for footer
+#### Page structure (HTML)
+- [X] Build the header/nav (desktop)
+- [X] Build the header/nav (mobile)
+- [X] Build the 'more+' menu
+- [X] Build the hero banner
+- [X] Build the main content
+- [X] Build the btn-scroll
+- [X] Build the html for footer
 
-#### styling (CSS)
-- [X] mobile-first base style
-- [X] style the header/nav
-- [X] style the 'more+' menu 
-- [X] style the hero banner
-- [X] style the main content
-- [X] style 'show more' links
-- [X] style the footer
-- [X] style the btn-scroll
-- [X] responsive hedaer/nav for tablet/desktop
+#### Styling (CSS)
+- [X] Mobile-first base style
+- [X] Style the header/nav
+- [X] Style the 'more+' menu 
+- [X] Style the hero banner
+- [X] Style the main content
+- [X] Style 'show more' links
+- [X] Style the footer
+- [X] Style the btn-scroll
+- [X] Responsive hedaer/nav for tablet/desktop
 
-#### interactivity (JS)
-- [X] mobile navigation menu toggle
-- [X] 'more+' menu toggle
-- [X]  btn-scroll
+#### Interactivity (JS)
+- [X] Mobile navigation menu toggle
+- [X] 'More+' menu toggle
+- [X] Btn-scroll
 
-#### final stuff
-- [X] final code cleanup and commenting
-- [X] deploy the site to Github Pages
-- [X] add the live site link to the top of the README
+#### Final stuff
+- [X] Final code cleanup and commenting
+- [X] Deploy the site to Github Pages
+- [X] Add the live site link to the top of the README
 
 <br>
 
